@@ -1,0 +1,15 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/**"
+  ],
+
+  "scripts": {
+    "start:backend": "cd packages/backend && yarn start",
+    "start:dashboard": "cd packages/dashboard && yarn start"
+  },
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
+}
