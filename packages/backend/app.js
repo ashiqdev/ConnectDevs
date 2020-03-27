@@ -4,7 +4,10 @@ const cors = require("cors");
 const expressValidator = require("express-validator");
 
 const errorHandlers = require("./handlers/errorHandler");
-const routes = require("./routes");
+const userRoutes = require("./routes/users");
+const authRoutes = require("./routes/auth");
+const profileRoutes = require("./routes/profile");
+const postsRoutes = require("./routes/posts");
 
 // create express app
 const app = express();
@@ -15,8 +18,17 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//Api Routes
-app.use("/api", routes);
+//User Routes
+app.use("/api/users", userRoutes);
+
+// auth Routes
+app.use("/api/auth", authRoutes);
+
+// profile Routes
+app.use("/api/profile", profileRoutes);
+
+// posts Routes
+app.use("/api/posts", postsRoutes);
 
 // If that above routes didnt work, we 404 them and forward to error handler
 app.use(errorHandlers.notFound);
