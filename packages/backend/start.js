@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
-const app = require("./app");
 
-const {PORT,DATABASE} = process.env;
+const { PORT, DATABASE } = process.env;
 
 const mongodbOptions = {
   useNewUrlParser: true,
@@ -15,7 +14,10 @@ mongoose.connection.on("error", err => {
   console.error(`${err.message}`);
 });
 
-// TODO import all of our models
+// import all of our models
+require("./models/User");
+
+const app = require("./app");
 
 app.set("port", PORT || 7777);
 const server = app.listen(app.get("port"), () => {
