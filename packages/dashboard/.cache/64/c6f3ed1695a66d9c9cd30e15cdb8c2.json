@@ -1,0 +1,27 @@
+{
+  "id": "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600066234500
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600064392499
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/package.json",
+      "includedInParent": true,
+      "mtime": 1598871761695
+    }
+  ],
+  "generated": {
+    "js": "function _interopRequireDefault(obj) {\n  return obj && obj.__esModule ? obj : {\n    \"default\": obj\n  };\n}\n\nmodule.exports = _interopRequireDefault;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "f3819f853d27dd303b8130f389fdc6f1",
+  "cacheData": { "env": {} }
+}

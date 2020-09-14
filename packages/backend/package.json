@@ -1,24 +1,44 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "scripts": {
-    "start": "nodemon start.js"
-  },
+  "name": "@devconnector/backend",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && webpack --mode development",
+    "watch": "yarn build --watch",
+    "dev": "nodemon -e js -x node --inspect dist/server.js --watch=dist",
+    "start": "NODE_ENV=production node -e js -x node --inspect dist/server.js --watch=dist"
+  },
   "dependencies": {
+    "@sendgrid/mail": "^7.2.5",
+    "axios": "^0.20.0",
     "bcryptjs": "^2.4.3",
-    "config": "^3.3.1",
     "cors": "^2.8.5",
+    "crypto": "^1.0.1",
     "express": "^4.17.1",
-    "express-validator": "^6.4.0",
-    "gravatar": "^1.8.0",
+    "express-jwt": "^6.0.0",
+    "express-validator": "^6.6.1",
+    "google-auth-library": "^6.0.6",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.6",
-    "request": "^2.88.2"
+    "lodash": "^4.17.20",
+    "mongoose": "^5.10.3",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.4.11"
   },
   "devDependencies": {
-    "concurrently": "^5.1.0",
-    "nodemon": "^2.0.2"
+    "@babel/core": "7.9.0",
+    "@babel/plugin-transform-runtime": "7.9.0",
+    "@babel/preset-env": "7.9.0",
+    "babel-loader": "8.1.0",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "nodemon": "2.0.4",
+    "utf-8-validate": "5.0.2",
+    "webpack": "4.42.1",
+    "webpack-bundle-analyzer": "3.6.1",
+    "webpack-cli": "3.3.11",
+    "webpack-node-externals": "1.7.2"
   }
 }
