@@ -33,10 +33,10 @@
     }
   ],
   "generated": {
-    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _reactDom = _interopRequireDefault(require(\"react-dom\"));\n\nvar _App = _interopRequireDefault(require(\"./views/App\"));\n\nfunction Container() {\n  return /*#__PURE__*/_react.default.createElement(_App.default, null);\n}\n\n_reactDom.default.render( /*#__PURE__*/_react.default.createElement(Container, null), document.querySelector('#root'));\n\nif (module.hot) {\n  module.hot.accept('./views/App', function () {\n    _reactDom.default.render( /*#__PURE__*/_react.default.createElement(Container, null), document.querySelector('#root'));\n  });\n}"
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _reactDom = _interopRequireDefault(require(\"react-dom\"));\n\nvar _App = _interopRequireDefault(require(\"./views/App\"));\n\nfunction Container() {\n  return /*#__PURE__*/_react.default.createElement(_App.default, null);\n}\n\n_reactDom.default.render( /*#__PURE__*/_react.default.createElement(Container, null), document.querySelector(\"#root\"));\n\nif (module.hot) {\n  module.hot.accept(\"./views/App\", function () {\n    _reactDom.default.render( /*#__PURE__*/_react.default.createElement(Container, null), document.querySelector(\"#root\"));\n  });\n}"
   },
   "sourceMaps": null,
   "error": null,
-  "hash": "73df1dc49cf45b50d5128a047de53544",
+  "hash": "5e9452558ec6c55da555b87c9c1a47c6",
   "cacheData": { "env": {} }
 }

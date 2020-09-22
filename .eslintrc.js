@@ -70,7 +70,7 @@ module.exports = {
     // these are simple formatting, like space, quotes etc.
     quotes: [
       2,
-      "single",
+      "double",
       {
         avoidEscape: true,
         allowTemplateLiterals: true,
@@ -80,7 +80,7 @@ module.exports = {
       "error",
       {
         trailingComma: "es5",
-        singleQuote: true,
+        singleQuote: false,
         printWidth: 80,
       },
     ],

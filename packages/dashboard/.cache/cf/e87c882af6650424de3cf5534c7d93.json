@@ -28,10 +28,10 @@
     }
   ],
   "generated": {
-    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _reactLoaderSpinner = _interopRequireDefault(require(\"react-loader-spinner\"));\n\nvar Spinner = function Spinner() {\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      width: '100px',\n      margin: 'auto',\n      display: 'block'\n    }\n  }, /*#__PURE__*/_react.default.createElement(_reactLoaderSpinner.default, {\n    type: \"ThreeDots\",\n    color: \"#7f8c8d\",\n    height: 100,\n    width: 100 //   timeout={3000}\n\n  }));\n};\n\nvar _default = Spinner;\nexports.default = _default;"
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _reactLoaderSpinner = _interopRequireDefault(require(\"react-loader-spinner\"));\n\nvar Spinner = function Spinner() {\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      width: \"100px\",\n      margin: \"auto\",\n      display: \"block\"\n    }\n  }, /*#__PURE__*/_react.default.createElement(_reactLoaderSpinner.default, {\n    type: \"ThreeDots\",\n    color: \"#7f8c8d\",\n    height: 100,\n    width: 100 //   timeout={3000}\n\n  }));\n};\n\nvar _default = Spinner;\nexports.default = _default;"
   },
   "sourceMaps": null,
   "error": null,
-  "hash": "765479ff4899970f6922b971d8df4a89",
+  "hash": "a2055ebfdfca434395bb5603ddab26c4",
   "cacheData": { "env": {} }
 }
