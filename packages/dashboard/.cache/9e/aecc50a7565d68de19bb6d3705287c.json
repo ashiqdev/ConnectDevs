@@ -1,0 +1,33 @@
+{
+  "id": "../node_modules/uuid/dist/esm-browser/version.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/node_modules/uuid/package.json",
+      "includedInParent": true,
+      "mtime": 1599038498644
+    },
+    {
+      "name": "./validate.js",
+      "loc": { "line": 1, "column": 21 },
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/node_modules/uuid/dist/esm-browser/version.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/node_modules/uuid/dist/esm-browser/validate.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _validate = _interopRequireDefault(require(\"./validate.js\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction version(uuid) {\n  if (!(0, _validate.default)(uuid)) {\n    throw TypeError('Invalid UUID');\n  }\n\n  return parseInt(uuid.substr(14, 1), 16);\n}\n\nvar _default = version;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "1619ca42d78f9a1a04a7aa7fff9ed8d1",
+  "cacheData": { "env": {} }
+}

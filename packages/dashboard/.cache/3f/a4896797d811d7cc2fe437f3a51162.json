@@ -1,0 +1,27 @@
+{
+  "id": "../../../node_modules/@babel/runtime/helpers/esm/extends.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/esm/package.json",
+      "includedInParent": true,
+      "mtime": 1598871761695
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = _extends;\n\nfunction _extends() {\n  exports.default = _extends = Object.assign || function (target) {\n    for (var i = 1; i < arguments.length; i++) {\n      var source = arguments[i];\n\n      for (var key in source) {\n        if (Object.prototype.hasOwnProperty.call(source, key)) {\n          target[key] = source[key];\n        }\n      }\n    }\n\n    return target;\n  };\n\n  return _extends.apply(this, arguments);\n}"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "171ddd1ddea4c098538b8c9cf1aabfb8",
+  "cacheData": { "env": {} }
+}

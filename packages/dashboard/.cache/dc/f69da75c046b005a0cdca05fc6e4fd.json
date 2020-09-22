@@ -1,0 +1,39 @@
+{
+  "id": "../../../node_modules/react-loader-spinner/dist/loader/CradleLoader.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/react-loader-spinner/package.json",
+      "includedInParent": true,
+      "mtime": 1600687892817
+    },
+    {
+      "name": "react",
+      "loc": { "line": 5, "column": 29 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-loader-spinner/dist/loader/CradleLoader.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "prop-types",
+      "loc": { "line": 5, "column": 47 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-loader-spinner/dist/loader/CradleLoader.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/prop-types/index.js"
+    }
+  ],
+  "generated": {
+    "js": "var define;\nvar global = arguments[3];\n(function (global, factory) {\n  if (typeof define === \"function\" && define.amd) {\n    define([\"exports\", \"react\", \"prop-types\"], factory);\n  } else if (typeof exports !== \"undefined\") {\n    factory(exports, require(\"react\"), require(\"prop-types\"));\n  } else {\n    var mod = {\n      exports: {}\n    };\n    factory(mod.exports, global.react, global.propTypes);\n    global.CradleLoader = mod.exports;\n  }\n})(this, function (exports, _react, _propTypes) {\n  \"use strict\";\n\n  Object.defineProperty(exports, \"__esModule\", {\n    value: true\n  });\n  exports.CradleLoader = undefined;\n\n  var _react2 = _interopRequireDefault(_react);\n\n  var _propTypes2 = _interopRequireDefault(_propTypes);\n\n  function _interopRequireDefault(obj) {\n    return obj && obj.__esModule ? obj : {\n      default: obj\n    };\n  }\n\n  var CradleLoader = exports.CradleLoader = function CradleLoader(props) {\n    return _react2.default.createElement(\n      \"div\",\n      { \"aria-label\": props.label, role: \"presentation\", className: \"container\" },\n      _react2.default.createElement(\n        \"div\",\n        { className: \"react-spinner-loader-swing\" },\n        _react2.default.createElement(\"div\", { className: \"react-spinner-loader-swing-l\" }),\n        _react2.default.createElement(\"div\", null),\n        _react2.default.createElement(\"div\", null),\n        _react2.default.createElement(\"div\", null),\n        _react2.default.createElement(\"div\", null),\n        _react2.default.createElement(\"div\", null),\n        _react2.default.createElement(\"div\", { className: \"react-spinner-loader-swing-r\" })\n      ),\n      _react2.default.createElement(\n        \"div\",\n        { className: \"react-spinner-loader-shadow\" },\n        _react2.default.createElement(\"div\", { className: \"react-spinner-loader-shadow-l\" }),\n        _react2.default.createElement(\"div\", null),\n        _react2.default.createElement(\"div\", null),\n        _react2.default.createElement(\"div\", null),\n        _react2.default.createElement(\"div\", null),\n        _react2.default.createElement(\"div\", null),\n        _react2.default.createElement(\"div\", { className: \"react-spinner-loader-shadow-r\" })\n      )\n    );\n  };\n\n  CradleLoader.propTypes = {\n    label: _propTypes2.default.string\n  };\n\n  CradleLoader.defaultProps = {\n    label: \"audio-loading\"\n  };\n});"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "382aaa4ea1b1f8785ace17a3d8711e4f",
+  "cacheData": { "env": {} }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "../../../node_modules/@babel/runtime/helpers/defineProperty.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/package.json",
+      "includedInParent": true,
+      "mtime": 1598871761695
+    }
+  ],
+  "generated": {
+    "js": "function _defineProperty(obj, key, value) {\n  if (key in obj) {\n    Object.defineProperty(obj, key, {\n      value: value,\n      enumerable: true,\n      configurable: true,\n      writable: true\n    });\n  } else {\n    obj[key] = value;\n  }\n\n  return obj;\n}\n\nmodule.exports = _defineProperty;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "5226bc68f9f9ed3f6adb764b37283235",
+  "cacheData": { "env": {} }
+}

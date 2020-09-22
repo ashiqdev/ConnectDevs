@@ -1,0 +1,52 @@
+{
+  "id": "components/routing/PrivateRoute.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/routing/PrivateRoute.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "@babel/runtime/helpers/extends",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/routing/PrivateRoute.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/extends.js"
+    },
+    {
+      "name": "@babel/runtime/helpers/objectWithoutProperties",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/routing/PrivateRoute.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/objectWithoutProperties.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/routing/PrivateRoute.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "react-router-dom",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/routing/PrivateRoute.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-router-dom/esm/react-router-dom.js"
+    },
+    {
+      "name": "react-redux",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/routing/PrivateRoute.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/index.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _extends2 = _interopRequireDefault(require(\"@babel/runtime/helpers/extends\"));\n\nvar _objectWithoutProperties2 = _interopRequireDefault(require(\"@babel/runtime/helpers/objectWithoutProperties\"));\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _reactRouterDom = require(\"react-router-dom\");\n\nvar _reactRedux = require(\"react-redux\");\n\nvar PrivateRoute = function PrivateRoute(_ref) {\n  var Component = _ref.component,\n      rest = (0, _objectWithoutProperties2.default)(_ref, [\"component\"]);\n  var isAuthenticated = (0, _reactRedux.useSelector)(function (state) {\n    return state.auth.isAuthenticated;\n  });\n  var loading = (0, _reactRedux.useSelector)(function (state) {\n    return state.auth.loading;\n  });\n  return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, (0, _extends2.default)({}, rest, {\n    render: function render(props) {\n      return !isAuthenticated && !loading ? /*#__PURE__*/_react.default.createElement(_reactRouterDom.Redirect, {\n        to: \"login\"\n      }) : /*#__PURE__*/_react.default.createElement(Component, props);\n    }\n  }));\n};\n\nvar _default = PrivateRoute;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "695ed9692422343882c90e7daabc37f1",
+  "cacheData": { "env": {} }
+}

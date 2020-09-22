@@ -1,0 +1,45 @@
+{
+  "id": "../../../node_modules/react-spinners/helpers/index.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/react-spinners/package.json",
+      "includedInParent": true,
+      "mtime": 1600686775951
+    },
+    {
+      "name": "./proptypes",
+      "loc": { "line": 6, "column": 17 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-spinners/helpers/index.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-spinners/helpers/proptypes.js"
+    },
+    {
+      "name": "./colors",
+      "loc": { "line": 7, "column": 17 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-spinners/helpers/index.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-spinners/helpers/colors.js"
+    },
+    {
+      "name": "./unitConverter",
+      "loc": { "line": 8, "column": 17 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-spinners/helpers/index.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-spinners/helpers/unitConverter.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(require(\"./proptypes\"));\n__export(require(\"./colors\"));\n__export(require(\"./unitConverter\"));\n"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "68afd63d259465cfcd5adbe462d6a7f5",
+  "cacheData": { "env": {} }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "../../../node_modules/@babel/runtime/helpers/extends.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/package.json",
+      "includedInParent": true,
+      "mtime": 1598871761695
+    }
+  ],
+  "generated": {
+    "js": "function _extends() {\n  module.exports = _extends = Object.assign || function (target) {\n    for (var i = 1; i < arguments.length; i++) {\n      var source = arguments[i];\n\n      for (var key in source) {\n        if (Object.prototype.hasOwnProperty.call(source, key)) {\n          target[key] = source[key];\n        }\n      }\n    }\n\n    return target;\n  };\n\n  return _extends.apply(this, arguments);\n}\n\nmodule.exports = _extends;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "141efdcc469a5b017701c29ca6075bbb",
+  "cacheData": { "env": {} }
+}

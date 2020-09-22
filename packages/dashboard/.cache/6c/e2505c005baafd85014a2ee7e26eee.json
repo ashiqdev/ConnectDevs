@@ -1,0 +1,33 @@
+{
+  "id": "../../../node_modules/@babel/runtime/helpers/objectWithoutProperties.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/package.json",
+      "includedInParent": true,
+      "mtime": 1598871761695
+    },
+    {
+      "name": "./objectWithoutPropertiesLoose",
+      "loc": { "line": 1, "column": 43 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/objectWithoutProperties.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js"
+    }
+  ],
+  "generated": {
+    "js": "var objectWithoutPropertiesLoose = require(\"./objectWithoutPropertiesLoose\");\n\nfunction _objectWithoutProperties(source, excluded) {\n  if (source == null) return {};\n  var target = objectWithoutPropertiesLoose(source, excluded);\n  var key, i;\n\n  if (Object.getOwnPropertySymbols) {\n    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);\n\n    for (i = 0; i < sourceSymbolKeys.length; i++) {\n      key = sourceSymbolKeys[i];\n      if (excluded.indexOf(key) >= 0) continue;\n      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;\n      target[key] = source[key];\n    }\n  }\n\n  return target;\n}\n\nmodule.exports = _objectWithoutProperties;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "e13632b3899a6db16b18f37422f124a5",
+  "cacheData": { "env": {} }
+}

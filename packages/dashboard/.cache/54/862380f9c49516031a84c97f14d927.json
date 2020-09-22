@@ -1,0 +1,33 @@
+{
+  "id": "../../../node_modules/@babel/runtime/helpers/arrayWithoutHoles.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/package.json",
+      "includedInParent": true,
+      "mtime": 1598871761695
+    },
+    {
+      "name": "./arrayLikeToArray",
+      "loc": { "line": 1, "column": 31 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/arrayWithoutHoles.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/arrayLikeToArray.js"
+    }
+  ],
+  "generated": {
+    "js": "var arrayLikeToArray = require(\"./arrayLikeToArray\");\n\nfunction _arrayWithoutHoles(arr) {\n  if (Array.isArray(arr)) return arrayLikeToArray(arr);\n}\n\nmodule.exports = _arrayWithoutHoles;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "a7b685817dc0abb833142db4f4cb05a0",
+  "cacheData": { "env": {} }
+}

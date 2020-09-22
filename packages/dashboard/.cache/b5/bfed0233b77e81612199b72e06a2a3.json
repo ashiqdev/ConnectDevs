@@ -1,0 +1,27 @@
+{
+  "id": "../../../node_modules/react-router/node_modules/isarray/index.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/react-router/node_modules/isarray/package.json",
+      "includedInParent": true,
+      "mtime": 1584673405858
+    }
+  ],
+  "generated": {
+    "js": "module.exports = Array.isArray || function (arr) {\n  return Object.prototype.toString.call(arr) == '[object Array]';\n};\n"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "0cc294ce6e30ae9a3624c7a07b18d490",
+  "cacheData": { "env": {} }
+}

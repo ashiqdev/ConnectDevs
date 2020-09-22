@@ -1,0 +1,33 @@
+{
+  "id": "../../../node_modules/@emotion/css/dist/css.browser.esm.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/@emotion/css/package.json",
+      "includedInParent": true,
+      "mtime": 1600686774674
+    },
+    {
+      "name": "@emotion/serialize",
+      "loc": { "line": 1, "column": 32 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/@emotion/css/dist/css.browser.esm.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@emotion/serialize/dist/serialize.browser.esm.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _serialize = require(\"@emotion/serialize\");\n\nfunction css() {\n  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {\n    args[_key] = arguments[_key];\n  }\n\n  return (0, _serialize.serializeStyles)(args);\n}\n\nvar _default = css;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "7b3eae22029bc9d795eb4173f6efc6e5",
+  "cacheData": { "env": {} }
+}

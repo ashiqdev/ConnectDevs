@@ -1,0 +1,62 @@
+{
+  "id": "components/dashboard/Dashboard.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/Dashboard.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireWildcard",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/Dashboard.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireWildcard.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/Dashboard.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "react-router-dom",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/Dashboard.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-router-dom/esm/react-router-dom.js"
+    },
+    {
+      "name": "react-redux",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/Dashboard.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/index.js"
+    },
+    {
+      "name": "../../actions/profile",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/Dashboard.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/profile.js"
+    },
+    {
+      "name": "../../views/Spinner",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/Dashboard.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Spinner.js"
+    },
+    {
+      "name": "./DashboardActions",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/Dashboard.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/DashboardActions.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nvar _interopRequireWildcard = require(\"@babel/runtime/helpers/interopRequireWildcard\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireWildcard(require(\"react\"));\n\nvar _reactRouterDom = require(\"react-router-dom\");\n\nvar _reactRedux = require(\"react-redux\");\n\nvar _profile = require(\"../../actions/profile\");\n\nvar _Spinner = _interopRequireDefault(require(\"../../views/Spinner\"));\n\nvar _DashboardActions = _interopRequireDefault(require(\"./DashboardActions\"));\n\nvar Dashboard = function Dashboard() {\n  var dispatch = (0, _reactRedux.useDispatch)();\n  (0, _react.useEffect)(function () {\n    dispatch((0, _profile.getCurrentProfile)());\n  }, [_profile.getCurrentProfile]);\n\n  var _useSelector = (0, _reactRedux.useSelector)(function (state) {\n    return state.auth;\n  }),\n      user = _useSelector.user;\n\n  var _useSelector2 = (0, _reactRedux.useSelector)(function (state) {\n    return state.profile;\n  }),\n      profile = _useSelector2.profile;\n\n  var loading = (0, _reactRedux.useSelector)(function (state) {\n    return state.profile.loading;\n  });\n  return loading && profile === null ? /*#__PURE__*/_react.default.createElement(_Spinner.default, null) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(\"h1\", {\n    className: \"large text-primary\"\n  }, \"Dashboard\"), /*#__PURE__*/_react.default.createElement(\"p\", {\n    className: \"lead\"\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fas fa-user\"\n  }), \" Welcome \", user && user.name), profile !== null ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_DashboardActions.default, null)) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(\"p\", null, \"You have not yet set up a profile, please add some info\"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {\n    to: \"/create-profile\",\n    className: \"btn btn-primary my-1\"\n  }, \"Create Profile\")));\n};\n\nvar _default = Dashboard;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "edc756bc48756cd1371b0554fa2fdbe8",
+  "cacheData": { "env": {} }
+}

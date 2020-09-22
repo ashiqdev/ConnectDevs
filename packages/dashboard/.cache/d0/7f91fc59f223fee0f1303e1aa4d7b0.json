@@ -1,0 +1,33 @@
+{
+  "id": "../../../node_modules/react-is/index.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/react-is/package.json",
+      "includedInParent": true,
+      "mtime": 1584852012848
+    },
+    {
+      "name": "./cjs/react-is.development.js",
+      "loc": { "line": 6, "column": 27 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-is/index.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-is/cjs/react-is.development.js"
+    }
+  ],
+  "generated": {
+    "js": "'use strict';\n\nif (\"development\" === 'production') {\n  module.exports = require('./cjs/react-is.production.min.js');\n} else {\n  module.exports = require('./cjs/react-is.development.js');\n}"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "25ca8bb2375695d7c9fa12db8dc07f7a",
+  "cacheData": { "env": { "NODE_ENV": "development" } }
+}

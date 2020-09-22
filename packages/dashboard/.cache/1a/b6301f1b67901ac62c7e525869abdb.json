@@ -1,0 +1,39 @@
+{
+  "id": "../node_modules/uuid/dist/esm-browser/v5.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/node_modules/uuid/package.json",
+      "includedInParent": true,
+      "mtime": 1599038498644
+    },
+    {
+      "name": "./v35.js",
+      "loc": { "line": 1, "column": 16 },
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/node_modules/uuid/dist/esm-browser/v5.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/node_modules/uuid/dist/esm-browser/v35.js"
+    },
+    {
+      "name": "./sha1.js",
+      "loc": { "line": 2, "column": 17 },
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/node_modules/uuid/dist/esm-browser/v5.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/node_modules/uuid/dist/esm-browser/sha1.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _v = _interopRequireDefault(require(\"./v35.js\"));\n\nvar _sha = _interopRequireDefault(require(\"./sha1.js\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar v5 = (0, _v.default)('v5', 0x50, _sha.default);\nvar _default = v5;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "08c0f4d1f9bad232fbbd8635497d7bda",
+  "cacheData": { "env": {} }
+}

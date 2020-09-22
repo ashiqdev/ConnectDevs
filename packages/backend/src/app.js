@@ -1,13 +1,11 @@
 import express from "express";
-import mongoose from "mongoose";
 import cors from "cors";
-import expressValidator from "express-validator";
 
 import { notFound, developmentErrors } from "./handlers/errorHandler";
-import userRoutes from "./routes/users";
-import authRoutes from "./routes/auth";
-import profileRoutes from "./routes/profile";
-import postsRoutes from "./routes/posts";
+import userRoutes from "./routes/api/users";
+import authRoutes from "./routes/api/auth";
+import profileRoutes from "./routes/api/profile";
+import postsRoutes from "./routes/api/posts";
 
 // create express app
 const app = express();
@@ -16,9 +14,9 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 
-//User Routes
+// User Routes
 app.use("/api/users", userRoutes);
 
 // auth Routes

@@ -1,0 +1,45 @@
+{
+  "id": "../../../node_modules/react-redux/es/hooks/useStore.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/package.json",
+      "includedInParent": true,
+      "mtime": 1599222601107
+    },
+    {
+      "name": "react",
+      "loc": { "line": 1, "column": 27 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/hooks/useStore.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "../components/Context",
+      "loc": { "line": 2, "column": 34 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/hooks/useStore.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/components/Context.js"
+    },
+    {
+      "name": "./useReduxContext",
+      "loc": { "line": 3, "column": 58 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/hooks/useStore.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/hooks/useReduxContext.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.createStoreHook = createStoreHook;\nexports.useStore = void 0;\n\nvar _react = require(\"react\");\n\nvar _Context = require(\"../components/Context\");\n\nvar _useReduxContext2 = require(\"./useReduxContext\");\n\n/**\r\n * Hook factory, which creates a `useStore` hook bound to a given context.\r\n *\r\n * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.\r\n * @returns {Function} A `useStore` hook bound to the specified context.\r\n */\nfunction createStoreHook(context) {\n  if (context === void 0) {\n    context = _Context.ReactReduxContext;\n  }\n\n  var useReduxContext = context === _Context.ReactReduxContext ? _useReduxContext2.useReduxContext : function () {\n    return (0, _react.useContext)(context);\n  };\n  return function useStore() {\n    var _useReduxContext = useReduxContext(),\n        store = _useReduxContext.store;\n\n    return store;\n  };\n}\n/**\r\n * A hook to access the redux store.\r\n *\r\n * @returns {any} the redux store\r\n *\r\n * @example\r\n *\r\n * import React from 'react'\r\n * import { useStore } from 'react-redux'\r\n *\r\n * export const ExampleComponent = () => {\r\n *   const store = useStore()\r\n *   return <div>{store.getState()}</div>\r\n * }\r\n */\n\n\nvar useStore = /*#__PURE__*/createStoreHook();\nexports.useStore = useStore;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "7b60a8a90ffed5547c3764fc9aea0dc2",
+  "cacheData": { "env": {} }
+}

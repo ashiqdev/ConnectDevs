@@ -1,0 +1,31 @@
+{
+  "id": "../../../node_modules/@babel/runtime/regenerator/index.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/package.json",
+      "includedInParent": true,
+      "mtime": 1598871761695
+    },
+    {
+      "name": "regenerator-runtime",
+      "loc": { "line": 1, "column": 25 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/regenerator/index.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/regenerator-runtime/runtime.js"
+    }
+  ],
+  "generated": { "js": "module.exports = require(\"regenerator-runtime\");\n" },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "9804290d956ced230f96ce5e33b621f7",
+  "cacheData": { "env": {} }
+}

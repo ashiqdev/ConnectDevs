@@ -1,0 +1,37 @@
+{
+  "id": "components/dashboard/DashboardActions.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/DashboardActions.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/DashboardActions.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "react-router-dom",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/DashboardActions.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-router-dom/esm/react-router-dom.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _reactRouterDom = require(\"react-router-dom\");\n\nvar DashboardActions = function DashboardActions() {\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"dash-buttons\"\n  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {\n    to: \"/edit-profile\",\n    className: \"btn btn-light\"\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fas fa-user-circle text-primary\"\n  }), \" Edit Profile\"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {\n    to: \"/add-experience\",\n    className: \"btn btn-light\"\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fab fa-black-tie text-primary\"\n  }), \" Add Experience\"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {\n    to: \"/add-education\",\n    className: \"btn btn-light\"\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fas fa-graduation-cap text-primary\"\n  }), \" Add Education\"));\n};\n\nvar _default = DashboardActions;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "e3418cb41d6c9f29edce99b5b9dabb77",
+  "cacheData": { "env": {} }
+}

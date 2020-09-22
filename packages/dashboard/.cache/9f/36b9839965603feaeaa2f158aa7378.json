@@ -1,0 +1,37 @@
+{
+  "id": "reducers/alertReducer.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/reducers/alertReducer.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "@babel/runtime/helpers/toConsumableArray",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/reducers/alertReducer.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/toConsumableArray.js"
+    },
+    {
+      "name": "../actions/types",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/reducers/alertReducer.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/types.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = _default;\n\nvar _toConsumableArray2 = _interopRequireDefault(require(\"@babel/runtime/helpers/toConsumableArray\"));\n\nvar _types = require(\"../actions/types\");\n\nvar initialState = [];\n\nfunction _default() {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    case _types.SET_ALERT:\n      return [].concat((0, _toConsumableArray2.default)(state), [action.payload]);\n\n    case _types.REMOVE_ALERT:\n      return state.filter(function (alert) {\n        return alert.id !== action.payload;\n      });\n\n    default:\n      return state;\n  }\n}"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "599c7f292e535660913eb05bbda09335",
+  "cacheData": { "env": {} }
+}

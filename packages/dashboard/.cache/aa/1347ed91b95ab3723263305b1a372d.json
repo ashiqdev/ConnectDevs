@@ -1,0 +1,39 @@
+{
+  "id": "../../../node_modules/react-redux/es/hooks/useDispatch.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/package.json",
+      "includedInParent": true,
+      "mtime": 1599222601107
+    },
+    {
+      "name": "../components/Context",
+      "loc": { "line": 1, "column": 34 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/hooks/useDispatch.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/components/Context.js"
+    },
+    {
+      "name": "./useStore",
+      "loc": { "line": 2, "column": 61 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/hooks/useDispatch.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/hooks/useStore.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.createDispatchHook = createDispatchHook;\nexports.useDispatch = void 0;\n\nvar _Context = require(\"../components/Context\");\n\nvar _useStore = require(\"./useStore\");\n\n/**\r\n * Hook factory, which creates a `useDispatch` hook bound to a given context.\r\n *\r\n * @param {React.Context} [context=ReactReduxContext] Context passed to your `<Provider>`.\r\n * @returns {Function} A `useDispatch` hook bound to the specified context.\r\n */\nfunction createDispatchHook(context) {\n  if (context === void 0) {\n    context = _Context.ReactReduxContext;\n  }\n\n  var useStore = context === _Context.ReactReduxContext ? _useStore.useStore : (0, _useStore.createStoreHook)(context);\n  return function useDispatch() {\n    var store = useStore();\n    return store.dispatch;\n  };\n}\n/**\r\n * A hook to access the redux `dispatch` function.\r\n *\r\n * @returns {any|function} redux store's `dispatch` function\r\n *\r\n * @example\r\n *\r\n * import React, { useCallback } from 'react'\r\n * import { useDispatch } from 'react-redux'\r\n *\r\n * export const CounterComponent = ({ value }) => {\r\n *   const dispatch = useDispatch()\r\n *   const increaseCounter = useCallback(() => dispatch({ type: 'increase-counter' }), [])\r\n *   return (\r\n *     <div>\r\n *       <span>{value}</span>\r\n *       <button onClick={increaseCounter}>Increase counter</button>\r\n *     </div>\r\n *   )\r\n * }\r\n */\n\n\nvar useDispatch = /*#__PURE__*/createDispatchHook();\nexports.useDispatch = useDispatch;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "c169659bab8acd6639c9c027640cf887",
+  "cacheData": { "env": {} }
+}

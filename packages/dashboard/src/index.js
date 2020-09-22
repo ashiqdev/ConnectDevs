@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import App from "./views/App";
 
 function Container() {
-  return <div>Container</div>;
+  return <App />;
 }
 
 ReactDOM.render(<Container />, document.querySelector("#root"));

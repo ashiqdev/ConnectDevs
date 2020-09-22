@@ -1,0 +1,33 @@
+{
+  "id": "../../../node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/package.json",
+      "includedInParent": true,
+      "mtime": 1599222601107
+    },
+    {
+      "name": "react",
+      "loc": { "line": 1, "column": 43 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/utils/useIsomorphicLayoutEffect.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.useIsomorphicLayoutEffect = void 0;\n\nvar _react = require(\"react\");\n\n// React currently throws a warning when using useLayoutEffect on the server.\n// To get around it, we can conditionally useEffect on the server (no-op) and\n// useLayoutEffect in the browser. We need useLayoutEffect to ensure the store\n// subscription callback always has the selector from the latest render commit\n// available, otherwise a store update may happen between render and the effect,\n// which may cause missed updates; we also must ensure the store subscription\n// is created synchronously, otherwise a store update may occur before the\n// subscription is created and an inconsistent state may be observed\nvar useIsomorphicLayoutEffect = typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined' ? _react.useLayoutEffect : _react.useEffect;\nexports.useIsomorphicLayoutEffect = useIsomorphicLayoutEffect;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "b64320310263b70f783c0f11436ef855",
+  "cacheData": { "env": {} }
+}

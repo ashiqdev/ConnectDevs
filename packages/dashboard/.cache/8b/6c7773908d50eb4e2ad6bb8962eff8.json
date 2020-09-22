@@ -1,0 +1,33 @@
+{
+  "id": "../node_modules/uuid/dist/esm-browser/validate.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/node_modules/uuid/package.json",
+      "includedInParent": true,
+      "mtime": 1599038498644
+    },
+    {
+      "name": "./regex.js",
+      "loc": { "line": 1, "column": 18 },
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/node_modules/uuid/dist/esm-browser/validate.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/node_modules/uuid/dist/esm-browser/regex.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _regex = _interopRequireDefault(require(\"./regex.js\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction validate(uuid) {\n  return typeof uuid === 'string' && _regex.default.test(uuid);\n}\n\nvar _default = validate;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "56fe645144a3c7d0a5d179d0e0fdfaa2",
+  "cacheData": { "env": {} }
+}

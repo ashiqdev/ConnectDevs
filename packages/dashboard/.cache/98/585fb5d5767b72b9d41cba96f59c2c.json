@@ -1,0 +1,27 @@
+{
+  "id": "../../../node_modules/tiny-invariant/dist/tiny-invariant.esm.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/tiny-invariant/package.json",
+      "includedInParent": true,
+      "mtime": 1584673388601
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\nvar isProduction = \"development\" === 'production';\nvar prefix = 'Invariant failed';\n\nfunction invariant(condition, message) {\n  if (condition) {\n    return;\n  }\n\n  if (isProduction) {\n    throw new Error(prefix);\n  }\n\n  throw new Error(prefix + \": \" + (message || ''));\n}\n\nvar _default = invariant;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "53552a478fb2def96c53960f8d70ff5d",
+  "cacheData": { "env": { "NODE_ENV": "development" } }
+}

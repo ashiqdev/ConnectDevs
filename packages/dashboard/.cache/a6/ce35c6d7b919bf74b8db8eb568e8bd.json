@@ -1,0 +1,47 @@
+{
+  "id": "reducers/index.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/reducers/index.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "redux",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/reducers/index.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/redux/es/redux.js"
+    },
+    {
+      "name": "./alertReducer",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/reducers/index.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/reducers/alertReducer.js"
+    },
+    {
+      "name": "./authReducer",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/reducers/index.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/reducers/authReducer.js"
+    },
+    {
+      "name": "./profileReducer",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/reducers/index.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/reducers/profileReducer.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _redux = require(\"redux\");\n\nvar _alertReducer = _interopRequireDefault(require(\"./alertReducer\"));\n\nvar _authReducer = _interopRequireDefault(require(\"./authReducer\"));\n\nvar _profileReducer = _interopRequireDefault(require(\"./profileReducer\"));\n\nvar _default = (0, _redux.combineReducers)({\n  alert: _alertReducer.default,\n  auth: _authReducer.default,\n  profile: _profileReducer.default\n});\n\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "8aae8c7868eff0a3853b196e7f49937c",
+  "cacheData": { "env": {} }
+}

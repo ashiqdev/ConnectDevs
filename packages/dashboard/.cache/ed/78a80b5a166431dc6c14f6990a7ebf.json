@@ -1,0 +1,31 @@
+{
+  "id": "../../../node_modules/react-loader-spinner/index.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/react-loader-spinner/package.json",
+      "includedInParent": true,
+      "mtime": 1600687892817
+    },
+    {
+      "name": "./dist/index",
+      "loc": { "line": 1, "column": 25 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-loader-spinner/index.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-loader-spinner/dist/index.js"
+    }
+  ],
+  "generated": { "js": "module.exports = require('./dist/index');" },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "feb3022f711405fc9b68ca8ec12f87c3",
+  "cacheData": { "env": {} }
+}

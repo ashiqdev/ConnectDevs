@@ -4,12 +4,12 @@
     {
       "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
       "includedInParent": true,
-      "mtime": 1600064392499
+      "mtime": 1600687536415
     },
     {
       "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
       "includedInParent": true,
-      "mtime": 1600066234500
+      "mtime": 1600687904360
     },
     {
       "name": "@babel/runtime/helpers/interopRequireDefault",
@@ -25,13 +25,18 @@
       "name": "react-dom",
       "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/index.js",
       "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-dom/index.js"
+    },
+    {
+      "name": "./views/App",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/index.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/App.js"
     }
   ],
   "generated": {
-    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _reactDom = _interopRequireDefault(require(\"react-dom\"));\n\nfunction Container() {\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, \"Container\");\n}\n\n_reactDom.default.render( /*#__PURE__*/_react.default.createElement(Container, null), document.querySelector('#root'));\n\nif (module.hot) {\n  module.hot.accept('./views/App', function () {\n    _reactDom.default.render( /*#__PURE__*/_react.default.createElement(Container, null), document.querySelector('#root'));\n  });\n}"
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _reactDom = _interopRequireDefault(require(\"react-dom\"));\n\nvar _App = _interopRequireDefault(require(\"./views/App\"));\n\nfunction Container() {\n  return /*#__PURE__*/_react.default.createElement(_App.default, null);\n}\n\n_reactDom.default.render( /*#__PURE__*/_react.default.createElement(Container, null), document.querySelector('#root'));\n\nif (module.hot) {\n  module.hot.accept('./views/App', function () {\n    _reactDom.default.render( /*#__PURE__*/_react.default.createElement(Container, null), document.querySelector('#root'));\n  });\n}"
   },
   "sourceMaps": null,
   "error": null,
-  "hash": "9941a45c908eeabc31d1bfabda677d88",
+  "hash": "73df1dc49cf45b50d5128a047de53544",
   "cacheData": { "env": {} }
 }

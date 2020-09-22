@@ -1,0 +1,42 @@
+{
+  "id": "views/Landing.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Landing.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Landing.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "react-router-dom",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Landing.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-router-dom/esm/react-router-dom.js"
+    },
+    {
+      "name": "react-redux",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Landing.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/index.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _reactRouterDom = require(\"react-router-dom\");\n\nvar _reactRedux = require(\"react-redux\");\n\nvar Landing = function Landing() {\n  var isAuthenticated = (0, _reactRedux.useSelector)(function (state) {\n    return state.auth.isAuthenticated;\n  });\n\n  if (isAuthenticated) {\n    return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Redirect, {\n      to: \"/dashboard\"\n    });\n  }\n\n  return /*#__PURE__*/_react.default.createElement(\"section\", {\n    className: \"landing\"\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"dark-overlay\"\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"landing-inner\"\n  }, /*#__PURE__*/_react.default.createElement(\"h1\", {\n    className: \"x-large\"\n  }, \"Developer Connector\"), /*#__PURE__*/_react.default.createElement(\"p\", {\n    className: \"lead\"\n  }, \"Create a developer profile/portfolio, share posts and get help from other developers\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"buttons\"\n  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {\n    to: \"/register\",\n    className: \"btn btn-primary\"\n  }, \"Sign Up\"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {\n    to: \"/login\",\n    className: \"btn btn-light\"\n  }, \"Login\")))));\n};\n\nvar _default = Landing;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "2b26bf179573b88bbf692c2cacaa5daf",
+  "cacheData": { "env": {} }
+}

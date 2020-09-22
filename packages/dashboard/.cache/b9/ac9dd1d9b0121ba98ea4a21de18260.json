@@ -1,0 +1,27 @@
+{
+  "id": "../../../node_modules/@babel/runtime/helpers/nonIterableRest.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/package.json",
+      "includedInParent": true,
+      "mtime": 1598871761695
+    }
+  ],
+  "generated": {
+    "js": "function _nonIterableRest() {\n  throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");\n}\n\nmodule.exports = _nonIterableRest;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "8f76a4d02aab37a9383531cf4e1ea792",
+  "cacheData": { "env": {} }
+}

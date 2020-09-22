@@ -1,0 +1,27 @@
+{
+  "id": "../../../node_modules/react-redux/es/utils/shallowEqual.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/package.json",
+      "includedInParent": true,
+      "mtime": 1599222601107
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = shallowEqual;\n\nfunction is(x, y) {\n  if (x === y) {\n    return x !== 0 || y !== 0 || 1 / x === 1 / y;\n  } else {\n    return x !== x && y !== y;\n  }\n}\n\nfunction shallowEqual(objA, objB) {\n  if (is(objA, objB)) return true;\n\n  if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {\n    return false;\n  }\n\n  var keysA = Object.keys(objA);\n  var keysB = Object.keys(objB);\n  if (keysA.length !== keysB.length) return false;\n\n  for (var i = 0; i < keysA.length; i++) {\n    if (!Object.prototype.hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) {\n      return false;\n    }\n  }\n\n  return true;\n}"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "0fa4df31fd9a8aecaa6cd83ca83a3df3",
+  "cacheData": { "env": {} }
+}

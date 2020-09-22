@@ -1,0 +1,33 @@
+{
+  "id": "../../../node_modules/react-redux/es/utils/reactBatchedUpdates.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/package.json",
+      "includedInParent": true,
+      "mtime": 1599222601107
+    },
+    {
+      "name": "react-dom",
+      "loc": { "line": 2, "column": 40 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/utils/reactBatchedUpdates.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-dom/index.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nObject.defineProperty(exports, \"unstable_batchedUpdates\", {\n  enumerable: true,\n  get: function () {\n    return _reactDom.unstable_batchedUpdates;\n  }\n});\n\nvar _reactDom = require(\"react-dom\");"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "e62e1eb12e1154393546d02f906de056",
+  "cacheData": { "env": {} }
+}

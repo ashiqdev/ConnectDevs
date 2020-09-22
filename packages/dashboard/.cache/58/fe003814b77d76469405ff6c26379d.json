@@ -9,10 +9,10 @@
     }
   ],
   "generated": {
-    "html": "\n<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n    <!-- FontAwesome -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css\">\n\n    <!-- Google Font -->\n\n    <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap\" rel=\"stylesheet\">\n\n    <title>MERNAUTH</title>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script src=\"/168726dbe96b3ce427e7fedce31bb0bc.js\"></script>\n  </body>\n</html>"
+    "html": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n    <!-- FontAwesome -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css\">\n\n    <!-- Google Font -->\n\n    <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap\" rel=\"stylesheet\">\n\n    <title>DEVCONNECTOR</title>\n  </head>\n  <body>\n    <div id=\"root\"></div>\n    <script src=\"/168726dbe96b3ce427e7fedce31bb0bc.js\"></script>\n  </body>\n</html>\n"
   },
   "sourceMaps": null,
   "error": null,
-  "hash": "083b6cf76c733e1743c20ca78e5aee83",
+  "hash": "d5fddd0c749dc365e4679532e048b23e",
   "cacheData": {}
 }

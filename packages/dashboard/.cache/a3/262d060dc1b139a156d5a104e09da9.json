@@ -1,0 +1,82 @@
+{
+  "id": "components/auth/Register.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireWildcard",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/auth/Register.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireWildcard.js"
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/auth/Register.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "@babel/runtime/regenerator",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/auth/Register.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/regenerator/index.js"
+    },
+    {
+      "name": "@babel/runtime/helpers/asyncToGenerator",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/auth/Register.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/asyncToGenerator.js"
+    },
+    {
+      "name": "@babel/runtime/helpers/defineProperty",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/auth/Register.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/defineProperty.js"
+    },
+    {
+      "name": "@babel/runtime/helpers/slicedToArray",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/auth/Register.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/slicedToArray.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/auth/Register.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "react-router-dom",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/auth/Register.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-router-dom/esm/react-router-dom.js"
+    },
+    {
+      "name": "react-redux",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/auth/Register.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/index.js"
+    },
+    {
+      "name": "prop-types",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/auth/Register.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/prop-types/index.js"
+    },
+    {
+      "name": "../../actions/alert",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/auth/Register.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/alert.js"
+    },
+    {
+      "name": "../../actions/auth",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/auth/Register.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/auth.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireWildcard = require(\"@babel/runtime/helpers/interopRequireWildcard\");\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _regenerator = _interopRequireDefault(require(\"@babel/runtime/regenerator\"));\n\nvar _asyncToGenerator2 = _interopRequireDefault(require(\"@babel/runtime/helpers/asyncToGenerator\"));\n\nvar _defineProperty2 = _interopRequireDefault(require(\"@babel/runtime/helpers/defineProperty\"));\n\nvar _slicedToArray2 = _interopRequireDefault(require(\"@babel/runtime/helpers/slicedToArray\"));\n\nvar _react = _interopRequireWildcard(require(\"react\"));\n\nvar _reactRouterDom = require(\"react-router-dom\");\n\nvar _reactRedux = require(\"react-redux\");\n\nvar _propTypes = _interopRequireDefault(require(\"prop-types\"));\n\nvar _alert = require(\"../../actions/alert\");\n\nvar _auth = require(\"../../actions/auth\");\n\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\nvar Register = function Register() {\n  var dispatch = (0, _reactRedux.useDispatch)();\n  var isAuthenticated = (0, _reactRedux.useSelector)(function (state) {\n    return state.auth.isAuthenticated;\n  });\n\n  var _useState = (0, _react.useState)({\n    name: '',\n    email: '',\n    password: '',\n    password2: ''\n  }),\n      _useState2 = (0, _slicedToArray2.default)(_useState, 2),\n      formData = _useState2[0],\n      setFormData = _useState2[1];\n\n  var name = formData.name,\n      email = formData.email,\n      password = formData.password,\n      password2 = formData.password2;\n\n  var onChangeHandler = function onChangeHandler(e) {\n    return setFormData(_objectSpread(_objectSpread({}, formData), {}, (0, _defineProperty2.default)({}, e.target.name, e.target.value)));\n  };\n\n  var onSubmitHandler = /*#__PURE__*/function () {\n    var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(e) {\n      return _regenerator.default.wrap(function _callee$(_context) {\n        while (1) {\n          switch (_context.prev = _context.next) {\n            case 0:\n              e.preventDefault();\n\n              if (password !== password2) {\n                dispatch((0, _alert.setAlert)('Passwords do not match', 'danger'));\n              } else {\n                dispatch((0, _auth.register)({\n                  name: name,\n                  email: email,\n                  password: password\n                }));\n              }\n\n            case 2:\n            case \"end\":\n              return _context.stop();\n          }\n        }\n      }, _callee);\n    }));\n\n    return function onSubmitHandler(_x) {\n      return _ref.apply(this, arguments);\n    };\n  }();\n\n  if (isAuthenticated) {\n    return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Redirect, {\n      to: \"/dashboard\"\n    });\n  }\n\n  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(\"h1\", {\n    className: \"large text-primary\"\n  }, \"Sign Up\"), /*#__PURE__*/_react.default.createElement(\"p\", {\n    className: \"lead\"\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fas fa-user\"\n  }), \" Create Your Account\"), /*#__PURE__*/_react.default.createElement(\"form\", {\n    className: \"form\",\n    onSubmit: onSubmitHandler\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"form-group\"\n  }, /*#__PURE__*/_react.default.createElement(\"input\", {\n    type: \"text\",\n    placeholder: \"Name\",\n    name: \"name\",\n    value: name,\n    onChange: onChangeHandler // required\n\n  })), /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"form-group\"\n  }, /*#__PURE__*/_react.default.createElement(\"input\", {\n    type: \"email\",\n    placeholder: \"Email Address\",\n    name: \"email\",\n    value: email,\n    onChange: onChangeHandler\n  }), /*#__PURE__*/_react.default.createElement(\"small\", {\n    className: \"form-text\"\n  }, \"This site uses Gravatar so if you want a profile image, use a Gravatar email\")), /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"form-group\"\n  }, /*#__PURE__*/_react.default.createElement(\"input\", {\n    type: \"password\",\n    placeholder: \"Password\",\n    name: \"password\",\n    value: password,\n    onChange: onChangeHandler // minLength=\"6\"\n\n  })), /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"form-group\"\n  }, /*#__PURE__*/_react.default.createElement(\"input\", {\n    type: \"password\",\n    placeholder: \"Confirm Password\",\n    name: \"password2\",\n    minLength: \"6\",\n    value: password2,\n    onChange: onChangeHandler\n  })), /*#__PURE__*/_react.default.createElement(\"input\", {\n    type: \"submit\",\n    className: \"btn btn-primary\",\n    value: \"Register\"\n  })), /*#__PURE__*/_react.default.createElement(\"p\", {\n    className: \"my-1\"\n  }, \"Already have an account? \", /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {\n    to: \"/login\"\n  }, \"Sign In\")));\n};\n\nRegister.propTypes = {};\nvar _default = Register;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "7e68205a6e8e422d565adc2326b2e72d",
+  "cacheData": { "env": {} }
+}

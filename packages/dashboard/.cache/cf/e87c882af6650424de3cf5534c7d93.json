@@ -1,0 +1,37 @@
+{
+  "id": "views/Spinner.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Spinner.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Spinner.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "react-loader-spinner",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Spinner.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-loader-spinner/index.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _reactLoaderSpinner = _interopRequireDefault(require(\"react-loader-spinner\"));\n\nvar Spinner = function Spinner() {\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      width: '100px',\n      margin: 'auto',\n      display: 'block'\n    }\n  }, /*#__PURE__*/_react.default.createElement(_reactLoaderSpinner.default, {\n    type: \"ThreeDots\",\n    color: \"#7f8c8d\",\n    height: 100,\n    width: 100 //   timeout={3000}\n\n  }));\n};\n\nvar _default = Spinner;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "765479ff4899970f6922b971d8df4a89",
+  "cacheData": { "env": {} }
+}

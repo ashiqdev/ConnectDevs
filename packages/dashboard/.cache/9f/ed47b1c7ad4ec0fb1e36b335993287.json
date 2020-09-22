@@ -1,0 +1,33 @@
+{
+  "id": "../../../node_modules/react-redux/es/components/Context.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/package.json",
+      "includedInParent": true,
+      "mtime": 1599222601107
+    },
+    {
+      "name": "react",
+      "loc": { "line": 1, "column": 18 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/components/Context.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = exports.ReactReduxContext = void 0;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar ReactReduxContext = /*#__PURE__*/_react.default.createContext(null);\n\nexports.ReactReduxContext = ReactReduxContext;\n\nif (\"development\" !== 'production') {\n  ReactReduxContext.displayName = 'ReactRedux';\n}\n\nvar _default = ReactReduxContext;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "ec186db09c04e00387ac5d13c98c98b7",
+  "cacheData": { "env": { "NODE_ENV": "development" } }
+}

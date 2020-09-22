@@ -1,0 +1,22 @@
+{
+  "id": "assets/img/showcase.jpg",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nmodule.exports = \"/60c6433db81c9621644b59b5c621de24.jpg\";"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "4b31330b20e3cff3e49d540e4e7175e2",
+  "cacheData": { "env": {} }
+}

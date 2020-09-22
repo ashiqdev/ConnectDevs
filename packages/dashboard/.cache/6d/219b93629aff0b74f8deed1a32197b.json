@@ -1,0 +1,27 @@
+{
+  "id": "../node_modules/uuid/dist/esm-browser/nil.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/node_modules/uuid/package.json",
+      "includedInParent": true,
+      "mtime": 1599038498644
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\nvar _default = '00000000-0000-0000-0000-000000000000';\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "cfa4138d5ab004fd842034ef0a44a6f5",
+  "cacheData": { "env": {} }
+}

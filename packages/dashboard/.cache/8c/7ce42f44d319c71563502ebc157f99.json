@@ -1,0 +1,33 @@
+{
+  "id": "../../../node_modules/redux-devtools-extension/index.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/redux-devtools-extension/package.json",
+      "includedInParent": true,
+      "mtime": 1584673367207
+    },
+    {
+      "name": "redux",
+      "loc": { "line": 3, "column": 22 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/redux-devtools-extension/index.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/redux/es/redux.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar compose = require('redux').compose;\n\nexports.__esModule = true;\nexports.composeWithDevTools = (\n  typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?\n    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ :\n    function() {\n      if (arguments.length === 0) return undefined;\n      if (typeof arguments[0] === 'object') return compose;\n      return compose.apply(null, arguments);\n    }\n);\n\nexports.devToolsEnhancer = (\n  typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION__ ?\n    window.__REDUX_DEVTOOLS_EXTENSION__ :\n    function() { return function(noop) { return noop; } }\n);\n"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "0d70c77c73a193d46df68a0b0233f0fd",
+  "cacheData": { "env": {} }
+}

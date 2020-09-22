@@ -1,0 +1,32 @@
+{
+  "id": "actions/alert.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "uuid",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/alert.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/node_modules/uuid/dist/esm-browser/index.js"
+    },
+    {
+      "name": "./types",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/alert.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/types.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.setAlert = void 0;\n\nvar _uuid = require(\"uuid\");\n\nvar _types = require(\"./types\");\n\n// eslint-disable-next-line import/prefer-default-export\nvar setAlert = function setAlert(msg, alertType) {\n  var timeout = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 5000;\n  return function (dispatch) {\n    var id = (0, _uuid.v4)();\n    dispatch({\n      type: _types.SET_ALERT,\n      payload: {\n        msg: msg,\n        alertType: alertType,\n        id: id\n      }\n    });\n    setTimeout(function () {\n      return dispatch({\n        type: _types.REMOVE_ALERT,\n        payload: id\n      });\n    }, timeout);\n  };\n};\n\nexports.setAlert = setAlert;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "a54448ca07e280362849160f45ad4ec4",
+  "cacheData": { "env": {} }
+}

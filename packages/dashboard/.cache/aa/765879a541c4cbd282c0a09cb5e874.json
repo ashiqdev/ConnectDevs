@@ -1,0 +1,42 @@
+{
+  "id": "views/Alert.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Alert.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Alert.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "prop-types",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Alert.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/prop-types/index.js"
+    },
+    {
+      "name": "react-redux",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Alert.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/index.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _propTypes = _interopRequireDefault(require(\"prop-types\"));\n\nvar _reactRedux = require(\"react-redux\");\n\nvar Alert = function Alert() {\n  var alerts = (0, _reactRedux.useSelector)(function (state) {\n    return state.alert;\n  });\n  var alertMessage = alerts !== null && alerts.length > 0 && alerts.map(function (alert) {\n    return /*#__PURE__*/_react.default.createElement(\"div\", {\n      key: alert.id,\n      className: \"alert alert-\".concat(alert.alertType)\n    }, alert.msg);\n  });\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, alertMessage);\n};\n\nAlert.propTypes = {};\nvar _default = Alert;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "560bcaec5446462fc4beba3792a7edfa",
+  "cacheData": { "env": {} }
+}

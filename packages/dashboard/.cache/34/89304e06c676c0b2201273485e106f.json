@@ -1,0 +1,32 @@
+{
+  "id": "utils/setAuthToken.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/utils/setAuthToken.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "axios",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/utils/setAuthToken.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/axios/index.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _axios = _interopRequireDefault(require(\"axios\"));\n\nvar setAuthToken = function setAuthToken(token) {\n  //   check if token exists on localStorage\n  if (token) {\n    _axios.default.defaults.headers.common['x-auth-token'] = token;\n  } else {\n    delete _axios.default.defaults.headers.common['x-auth-token'];\n  }\n};\n\nvar _default = setAuthToken;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "6396de7d301ab1bd22ef18cc97453f3e",
+  "cacheData": { "env": {} }
+}

@@ -9,18 +9,11 @@
       ],
       ["@babel/plugin-proposal-optional-chaining", {}, "chain"],
       ["@babel/plugin-transform-runtime", { "regenerator": true }],
-      [
-        "import",
-        {
-          "libraryName": "antd",
-          "libraryDirectory": "es",
-          "style": true
-        }
-      ],
+  
       [
         "module-resolver",
         {
-          "root": ["./"],
+          "root": ["./src"],
           "alias": {
             "src": "./src"
           }

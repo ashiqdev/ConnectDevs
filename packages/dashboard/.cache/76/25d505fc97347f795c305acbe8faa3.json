@@ -1,0 +1,57 @@
+{
+  "id": "actions/auth.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/auth.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "@babel/runtime/regenerator",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/auth.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/regenerator/index.js"
+    },
+    {
+      "name": "@babel/runtime/helpers/asyncToGenerator",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/auth.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/asyncToGenerator.js"
+    },
+    {
+      "name": "axios",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/auth.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/axios/index.js"
+    },
+    {
+      "name": "../utils/setAuthToken",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/auth.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/utils/setAuthToken.js"
+    },
+    {
+      "name": "./types",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/auth.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/types.js"
+    },
+    {
+      "name": "./alert",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/auth.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/alert.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.logout = exports.login = exports.register = exports.loadUser = void 0;\n\nvar _regenerator = _interopRequireDefault(require(\"@babel/runtime/regenerator\"));\n\nvar _asyncToGenerator2 = _interopRequireDefault(require(\"@babel/runtime/helpers/asyncToGenerator\"));\n\nvar _axios = _interopRequireDefault(require(\"axios\"));\n\nvar _setAuthToken = _interopRequireDefault(require(\"../utils/setAuthToken\"));\n\nvar _types = require(\"./types\");\n\nvar _alert = require(\"./alert\");\n\n/* eslint-disable import/prefer-default-export */\n// LOAD USER\n// if there is a token on localstorage, I will always send that\nvar loadUser = function loadUser() {\n  return /*#__PURE__*/function () {\n    var _ref = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee(dispatch) {\n      var res;\n      return _regenerator.default.wrap(function _callee$(_context) {\n        while (1) {\n          switch (_context.prev = _context.next) {\n            case 0:\n              if (localStorage.token) {\n                (0, _setAuthToken.default)(localStorage.token);\n              }\n\n              _context.prev = 1;\n              _context.next = 4;\n              return _axios.default.get(\"\".concat(\"http://localhost:7777\", \"/api/auth\"));\n\n            case 4:\n              res = _context.sent;\n              dispatch({\n                type: _types.USER_LOADED,\n                payload: res.data\n              });\n              _context.next = 11;\n              break;\n\n            case 8:\n              _context.prev = 8;\n              _context.t0 = _context[\"catch\"](1);\n              dispatch({\n                type: _types.AUTH_ERROR\n              });\n\n            case 11:\n            case \"end\":\n              return _context.stop();\n          }\n        }\n      }, _callee, null, [[1, 8]]);\n    }));\n\n    return function (_x) {\n      return _ref.apply(this, arguments);\n    };\n  }();\n}; // REGISTER USER\n\n\nexports.loadUser = loadUser;\n\nvar register = function register(_ref2) {\n  var name = _ref2.name,\n      email = _ref2.email,\n      password = _ref2.password;\n  return /*#__PURE__*/function () {\n    var _ref3 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee2(dispatch) {\n      var config, body, res, errors;\n      return _regenerator.default.wrap(function _callee2$(_context2) {\n        while (1) {\n          switch (_context2.prev = _context2.next) {\n            case 0:\n              config = {\n                headers: {\n                  'Content-Type': 'application/json'\n                }\n              };\n              body = JSON.stringify({\n                name: name,\n                email: email,\n                password: password\n              });\n              _context2.prev = 2;\n              _context2.next = 5;\n              return _axios.default.post(\"\".concat(\"http://localhost:7777\", \"/api/users/\"), body, config);\n\n            case 5:\n              res = _context2.sent;\n              dispatch({\n                type: _types.REGISTER_SUCCESS,\n                payload: res.data\n              });\n              dispatch(loadUser());\n              _context2.next = 15;\n              break;\n\n            case 10:\n              _context2.prev = 10;\n              _context2.t0 = _context2[\"catch\"](2);\n              errors = _context2.t0.response.data.errors;\n\n              if (errors) {\n                errors.forEach(function (err) {\n                  return dispatch((0, _alert.setAlert)(err.msg, 'danger'));\n                });\n              }\n\n              dispatch({\n                type: _types.REGISTER_FAIL\n              });\n\n            case 15:\n            case \"end\":\n              return _context2.stop();\n          }\n        }\n      }, _callee2, null, [[2, 10]]);\n    }));\n\n    return function (_x2) {\n      return _ref3.apply(this, arguments);\n    };\n  }();\n}; // LOGIN USER\n\n\nexports.register = register;\n\nvar login = function login(email, password) {\n  return /*#__PURE__*/function () {\n    var _ref4 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee3(dispatch) {\n      var config, body, res, errors;\n      return _regenerator.default.wrap(function _callee3$(_context3) {\n        while (1) {\n          switch (_context3.prev = _context3.next) {\n            case 0:\n              config = {\n                headers: {\n                  'Content-Type': 'application/json'\n                }\n              };\n              body = JSON.stringify({\n                email: email,\n                password: password\n              });\n              _context3.prev = 2;\n              _context3.next = 5;\n              return _axios.default.post(\"\".concat(\"http://localhost:7777\", \"/api/auth/\"), body, config);\n\n            case 5:\n              res = _context3.sent;\n              dispatch({\n                type: _types.LOGIN_SUCCESS,\n                payload: res.data\n              });\n              dispatch(loadUser());\n              _context3.next = 15;\n              break;\n\n            case 10:\n              _context3.prev = 10;\n              _context3.t0 = _context3[\"catch\"](2);\n              errors = _context3.t0.response.data.errors;\n\n              if (errors) {\n                errors.forEach(function (err) {\n                  return dispatch((0, _alert.setAlert)(err.msg, 'danger'));\n                });\n              }\n\n              dispatch({\n                type: _types.LOGIN_FAIL\n              });\n\n            case 15:\n            case \"end\":\n              return _context3.stop();\n          }\n        }\n      }, _callee3, null, [[2, 10]]);\n    }));\n\n    return function (_x3) {\n      return _ref4.apply(this, arguments);\n    };\n  }();\n}; // LOGOUT / CLEAR PROFILE\n\n\nexports.login = login;\n\nvar logout = function logout() {\n  return /*#__PURE__*/function () {\n    var _ref5 = (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee4(dispatch) {\n      return _regenerator.default.wrap(function _callee4$(_context4) {\n        while (1) {\n          switch (_context4.prev = _context4.next) {\n            case 0:\n              dispatch({\n                type: _types.CLEAR_PROFILE\n              });\n              dispatch({\n                type: _types.LOG_OUT\n              });\n\n            case 2:\n            case \"end\":\n              return _context4.stop();\n          }\n        }\n      }, _callee4);\n    }));\n\n    return function (_x4) {\n      return _ref5.apply(this, arguments);\n    };\n  }();\n};\n\nexports.logout = logout;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "1b276acf24325bef27c17c8c8aa6a168",
+  "cacheData": { "env": { "API_URL": "http://localhost:7777" } }
+}

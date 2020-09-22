@@ -1,0 +1,31 @@
+{
+  "id": "../../../node_modules/axios/index.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/axios/package.json",
+      "includedInParent": true,
+      "mtime": 1599468447256
+    },
+    {
+      "name": "./lib/axios",
+      "loc": { "line": 1, "column": 25 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/axios/index.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/axios/lib/axios.js"
+    }
+  ],
+  "generated": { "js": "module.exports = require('./lib/axios');" },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "f9419448a18bda4def3da1865d289dd9",
+  "cacheData": { "env": {} }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "../../../node_modules/@emotion/weak-memoize/dist/weak-memoize.browser.esm.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/@emotion/weak-memoize/package.json",
+      "includedInParent": true,
+      "mtime": 1600686775042
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar weakMemoize = function weakMemoize(func) {\n  // $FlowFixMe flow doesn't include all non-primitive types as allowed for weakmaps\n  var cache = new WeakMap();\n  return function (arg) {\n    if (cache.has(arg)) {\n      // $FlowFixMe\n      return cache.get(arg);\n    }\n\n    var ret = func(arg);\n    cache.set(arg, ret);\n    return ret;\n  };\n};\n\nvar _default = weakMemoize;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "8b2e0a906ba77698f6908ae6563291f5",
+  "cacheData": { "env": {} }
+}

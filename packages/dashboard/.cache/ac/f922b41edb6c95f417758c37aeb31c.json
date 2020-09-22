@@ -1,0 +1,39 @@
+{
+  "id": "../../../node_modules/react-redux/es/hooks/useReduxContext.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/package.json",
+      "includedInParent": true,
+      "mtime": 1599222601107
+    },
+    {
+      "name": "react",
+      "loc": { "line": 1, "column": 27 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/hooks/useReduxContext.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "../components/Context",
+      "loc": { "line": 2, "column": 34 },
+      "parent": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/hooks/useReduxContext.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/components/Context.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.useReduxContext = useReduxContext;\n\nvar _react = require(\"react\");\n\nvar _Context = require(\"../components/Context\");\n\n/**\r\n * A hook to access the value of the `ReactReduxContext`. This is a low-level\r\n * hook that you should usually not need to call directly.\r\n *\r\n * @returns {any} the value of the `ReactReduxContext`\r\n *\r\n * @example\r\n *\r\n * import React from 'react'\r\n * import { useReduxContext } from 'react-redux'\r\n *\r\n * export const CounterComponent = ({ value }) => {\r\n *   const { store } = useReduxContext()\r\n *   return <div>{store.getState()}</div>\r\n * }\r\n */\nfunction useReduxContext() {\n  var contextValue = (0, _react.useContext)(_Context.ReactReduxContext);\n\n  if (\"development\" !== 'production' && !contextValue) {\n    throw new Error('could not find react-redux context value; please ensure the component is wrapped in a <Provider>');\n  }\n\n  return contextValue;\n}"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "74d492d55268a414686f05ae356b0b70",
+  "cacheData": { "env": { "NODE_ENV": "development" } }
+}

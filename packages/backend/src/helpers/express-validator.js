@@ -1,7 +1,8 @@
 const { check } = require("express-validator");
 
+// eslint-disable-next-line import/prefer-default-export
 export const registerValidator = [
-  check("name", "Name is required").not().isEmpty(),
+  check("name", "Ashik Name is required").not().isEmpty(),
 
   check("email", "Please include a valid email").isEmail(),
 
