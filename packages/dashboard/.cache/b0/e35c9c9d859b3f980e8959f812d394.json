@@ -1,0 +1,52 @@
+{
+  "id": "components/dashboard/Experience.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/Experience.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/Experience.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "prop-types",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/Experience.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/prop-types/index.js"
+    },
+    {
+      "name": "react-moment",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/Experience.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-moment/dist/index.js"
+    },
+    {
+      "name": "react-redux",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/Experience.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/index.js"
+    },
+    {
+      "name": "../../actions/profile",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/dashboard/Experience.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/profile.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _propTypes = _interopRequireDefault(require(\"prop-types\"));\n\nvar _reactMoment = _interopRequireDefault(require(\"react-moment\"));\n\nvar _reactRedux = require(\"react-redux\");\n\nvar _profile = require(\"../../actions/profile\");\n\nvar Experience = function Experience(_ref) {\n  var experience = _ref.experience;\n  var dispatch = (0, _reactRedux.useDispatch)();\n\n  var onClickHandler = function onClickHandler(id) {\n    dispatch((0, _profile.deleteExperience)(id));\n  };\n\n  var experiences = experience.map(function (exp) {\n    return /*#__PURE__*/_react.default.createElement(\"tr\", {\n      key: exp._id\n    }, /*#__PURE__*/_react.default.createElement(\"td\", null, exp.company), /*#__PURE__*/_react.default.createElement(\"td\", {\n      className: \"hide-sm\"\n    }, exp.title), /*#__PURE__*/_react.default.createElement(\"td\", null, /*#__PURE__*/_react.default.createElement(_reactMoment.default, {\n      format: \"YYYY/MM/DD\"\n    }, exp.form), \" -\", \" \", exp.to === null ? \"Now\" : /*#__PURE__*/_react.default.createElement(_reactMoment.default, {\n      format: \"YYYY/MM/DD\"\n    }, exp.to)), /*#__PURE__*/_react.default.createElement(\"td\", null, /*#__PURE__*/_react.default.createElement(\"button\", {\n      onClick: function onClick() {\n        return onClickHandler(exp._id);\n      },\n      type: \"submit\",\n      className: \"btn btn-danger\"\n    }, \"Delete\")));\n  });\n  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(\"h2\", {\n    className: \"my-2\"\n  }, \"Experience Credentials\"), /*#__PURE__*/_react.default.createElement(\"table\", {\n    className: \"table\"\n  }, /*#__PURE__*/_react.default.createElement(\"thead\", null, /*#__PURE__*/_react.default.createElement(\"tr\", null, /*#__PURE__*/_react.default.createElement(\"th\", null, \"Title\"), /*#__PURE__*/_react.default.createElement(\"th\", {\n    className: \"hide-sm\"\n  }, \"Company\"), /*#__PURE__*/_react.default.createElement(\"th\", {\n    className: \"hide-sm\"\n  }, \"Years\"), /*#__PURE__*/_react.default.createElement(\"th\", null))), /*#__PURE__*/_react.default.createElement(\"tbody\", null, experiences)));\n};\n\nExperience.propTypes = {\n  // eslint-disable-next-line react/forbid-prop-types\n  experience: _propTypes.default.array.isRequired\n};\nvar _default = Experience;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "3ffc2fa5636eb26fea77f5402415df92",
+  "cacheData": { "env": {} }
+}

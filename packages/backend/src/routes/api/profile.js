@@ -5,6 +5,7 @@ import auth from "../../middleware/auth";
 
 const Profile = mongoose.model("Profile");
 const User = mongoose.model("User");
+const Post = mongoose.model("Post");
 
 const express = require("express");
 
@@ -22,7 +23,6 @@ router.get("/me", auth, async (req, res) => {
 
     if (!profile) {
       return res.status(400).json({ msg: "There is no profile for this user" });
-      console.log("No Profile");
     }
     res.json(profile);
   } catch (error) {
@@ -158,7 +158,8 @@ router.get("/user/:userId", async (req, res) => {
 
 router.delete("/", auth, async (req, res) => {
   try {
-    // TODO - remove users posts
+    // remove users posts
+    await Post.deleteMany({ user: req.user.id });
     // remove profile
     await Profile.findOneAndRemove({ user: req.user.id });
     // remove user

@@ -2547,6 +2547,9 @@
         var User = mongoose__WEBPACK_IMPORTED_MODULE_2___default.a.model(
           "User"
         );
+        var Post = mongoose__WEBPACK_IMPORTED_MODULE_2___default.a.model(
+          "Post"
+        );
 
         var express = __webpack_require__(/*! express */ "express");
 
@@ -2577,7 +2580,7 @@
                             profile = _context.sent;
 
                             if (profile) {
-                              _context.next = 7;
+                              _context.next = 6;
                               break;
                             }
 
@@ -2588,18 +2591,18 @@
                               })
                             );
 
-                          case 7:
+                          case 6:
                             res.json(profile);
-                            _context.next = 14;
+                            _context.next = 13;
                             break;
 
-                          case 10:
-                            _context.prev = 10;
+                          case 9:
+                            _context.prev = 9;
                             _context.t0 = _context["catch"](0);
                             console.error(_context.t0.message);
                             res.status(500).send("Server Error");
 
-                          case 14:
+                          case 13:
                           case "end":
                             return _context.stop();
                         }
@@ -2607,7 +2610,7 @@
                     },
                     _callee,
                     null,
-                    [[0, 10]]
+                    [[0, 9]]
                   );
                 }
               )
@@ -2952,30 +2955,36 @@
                           case 0:
                             _context5.prev = 0;
                             _context5.next = 3;
-                            return Profile.findOneAndRemove({
+                            return Post.deleteMany({
                               user: req.user.id,
                             });
 
                           case 3:
                             _context5.next = 5;
+                            return Profile.findOneAndRemove({
+                              user: req.user.id,
+                            });
+
+                          case 5:
+                            _context5.next = 7;
                             return User.findOneAndRemove({
                               _id: req.user.id,
                             });
 
-                          case 5:
+                          case 7:
                             res.json({
                               msg: "User has been Deleted",
                             });
-                            _context5.next = 12;
+                            _context5.next = 14;
                             break;
 
-                          case 8:
-                            _context5.prev = 8;
+                          case 10:
+                            _context5.prev = 10;
                             _context5.t0 = _context5["catch"](0);
                             console.error(_context5.t0.message);
                             res.status(500).send("Server Error");
 
-                          case 12:
+                          case 14:
                           case "end":
                             return _context5.stop();
                         }
@@ -2983,7 +2992,7 @@
                     },
                     _callee5,
                     null,
-                    [[0, 8]]
+                    [[0, 10]]
                   );
                 }
               )

@@ -1,15 +1,21 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { getCurrentProfile } from "src/actions/profile";
+import { deleteAccount, getCurrentProfile } from "src/actions/profile";
 import Spinner from "src/views/Spinner";
 import DashboardActions from "./DashboardActions";
+import Experience from "./Experience";
+import Education from "./Education";
 
 const Dashboard = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getCurrentProfile());
   }, [getCurrentProfile]);
+
+  const onClickHandler = () => {
+    dispatch(deleteAccount());
+  };
 
   const { user } = useSelector((state) => state.auth);
   const { profile } = useSelector((state) => state.profile);
@@ -25,6 +31,17 @@ const Dashboard = () => {
       {profile !== null ? (
         <>
           <DashboardActions />
+          <Experience experience={profile.experience} />
+          <Education education={profile.education} />
+          <div className="my-2">
+            <button
+              type="submit"
+              onClick={onClickHandler}
+              className="btn btn-danger"
+            >
+              <i className="fas fa-user-minus" /> Delete My Account
+            </button>
+          </div>
         </>
       ) : (
         <>
