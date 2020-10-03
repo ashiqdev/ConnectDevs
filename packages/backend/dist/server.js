@@ -1460,9 +1460,14 @@
       /***/ function (module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
-        var mongoose = __webpack_require__(/*! mongoose */ "mongoose");
+        /* harmony import */ var mongoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+          /*! mongoose */ "mongoose"
+        );
+        /* harmony import */ var mongoose__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/ __webpack_require__.n(
+          mongoose__WEBPACK_IMPORTED_MODULE_0__
+        );
 
-        var Schema = mongoose.Schema;
+        var Schema = mongoose__WEBPACK_IMPORTED_MODULE_0___default.a.Schema;
         var UserSchema = new Schema({
           name: {
             type: String,
@@ -1488,7 +1493,10 @@
         });
         /* harmony default export */ __webpack_exports__[
           "default"
-        ] = mongoose.model("User", UserSchema);
+        ] = mongoose__WEBPACK_IMPORTED_MODULE_0___default.a.model(
+          "User",
+          UserSchema
+        );
 
         /***/
       },

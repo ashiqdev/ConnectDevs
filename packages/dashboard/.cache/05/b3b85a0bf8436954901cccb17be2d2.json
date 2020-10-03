@@ -1,0 +1,52 @@
+{
+  "id": "components/profile/ProfileGithub.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileGithub.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireWildcard",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileGithub.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireWildcard.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileGithub.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "react-redux",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileGithub.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/index.js"
+    },
+    {
+      "name": "../../actions/profile",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileGithub.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/profile.js"
+    },
+    {
+      "name": "../../views/Spinner",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileGithub.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Spinner.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nvar _interopRequireWildcard = require(\"@babel/runtime/helpers/interopRequireWildcard\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireWildcard(require(\"react\"));\n\nvar _reactRedux = require(\"react-redux\");\n\nvar _profile = require(\"../../actions/profile\");\n\nvar _Spinner = _interopRequireDefault(require(\"../../views/Spinner\"));\n\nvar ProfileGithub = function ProfileGithub(_ref) {\n  var username = _ref.username;\n  var dispatch = (0, _reactRedux.useDispatch)();\n\n  var _useSelector = (0, _reactRedux.useSelector)(function (state) {\n    return state.profile;\n  }),\n      repos = _useSelector.repos;\n\n  (0, _react.useEffect)(function () {\n    dispatch((0, _profile.getGithubRepos)(username));\n  }, [_profile.getGithubRepos, username]);\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"profile-github\"\n  }, /*#__PURE__*/_react.default.createElement(\"h2\", {\n    className: \"text-primary my-1\"\n  }, \"Github Repos\"), repos === null ? /*#__PURE__*/_react.default.createElement(_Spinner.default, null) : repos.map(function (repo) {\n    return /*#__PURE__*/_react.default.createElement(\"div\", {\n      key: repo._id,\n      className: \"repo bg-white p-1 my-1\"\n    }, /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"h4\", null, /*#__PURE__*/_react.default.createElement(\"a\", {\n      href: repo.html_url,\n      target: \"_blank\",\n      rel: \"noopener noreferrer\"\n    }, repo.name)), /*#__PURE__*/_react.default.createElement(\"p\", null, repo.description)), /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"ul\", null, /*#__PURE__*/_react.default.createElement(\"li\", {\n      className: \"badge badge-primary\"\n    }, \"Stars: \", repo.stargazers_count), /*#__PURE__*/_react.default.createElement(\"li\", {\n      className: \"badge badge-dark\"\n    }, \"Watchers: \", repo.watchers_count), /*#__PURE__*/_react.default.createElement(\"li\", {\n      className: \"badge badge-ligt\"\n    }, \"Forks: \", repo.forks_count))));\n  }));\n};\n\nvar _default = ProfileGithub;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "024c80081b0d8e4cece4ad3a784a0007",
+  "cacheData": { "env": {} }
+}

@@ -47207,7 +47207,7 @@ object-assign
         Object.defineProperty(exports, "__esModule", {
           value: true,
         });
-        exports.ACCOUNT_DELETED = exports.UPDATE_PROFILE = exports.CLEAR_PROFILE = exports.PROFILE_ERROR = exports.GET_REPOS = exports.GET_PROFILES = exports.GET_PROFILE = exports.LOG_OUT = exports.LOGIN_FAIL = exports.LOGIN_SUCCESS = exports.AUTH_ERROR = exports.USER_LOADED = exports.REGISTER_FAIL = exports.REGISTER_SUCCESS = exports.REMOVE_ALERT = exports.SET_ALERT = void 0;
+        exports.REMOVE_COMMENT = exports.ADD_COMMENT = exports.ADD_POST = exports.DELETE_POST = exports.UPDATE_LIKES = exports.POST_ERROR = exports.GET_POST = exports.GET_POSTS = exports.ACCOUNT_DELETED = exports.UPDATE_PROFILE = exports.CLEAR_PROFILE = exports.PROFILE_ERROR = exports.GET_REPOS = exports.GET_PROFILES = exports.GET_PROFILE = exports.LOG_OUT = exports.LOGIN_FAIL = exports.LOGIN_SUCCESS = exports.AUTH_ERROR = exports.USER_LOADED = exports.REGISTER_FAIL = exports.REGISTER_SUCCESS = exports.REMOVE_ALERT = exports.SET_ALERT = void 0;
         var SET_ALERT = "SET_ALERT";
         exports.SET_ALERT = SET_ALERT;
         var REMOVE_ALERT = "REMOVE_ALERT";
@@ -47240,6 +47240,22 @@ object-assign
         exports.UPDATE_PROFILE = UPDATE_PROFILE;
         var ACCOUNT_DELETED = "ACCOUNT_DELETED";
         exports.ACCOUNT_DELETED = ACCOUNT_DELETED;
+        var GET_POSTS = "GET_POSTS";
+        exports.GET_POSTS = GET_POSTS;
+        var GET_POST = "GET_POST";
+        exports.GET_POST = GET_POST;
+        var POST_ERROR = "POST_ERROR";
+        exports.POST_ERROR = POST_ERROR;
+        var UPDATE_LIKES = "UPDATE_LIKES";
+        exports.UPDATE_LIKES = UPDATE_LIKES;
+        var DELETE_POST = "DELETE_POST";
+        exports.DELETE_POST = DELETE_POST;
+        var ADD_POST = "ADD_POST";
+        exports.ADD_POST = ADD_POST;
+        var ADD_COMMENT = "ADD_COMMENT";
+        exports.ADD_COMMENT = ADD_COMMENT;
+        var REMOVE_COMMENT = "REMOVE_COMMENT";
+        exports.REMOVE_COMMENT = REMOVE_COMMENT;
       },
       {},
     ],
@@ -49299,7 +49315,7 @@ object-assign
               return _ref.apply(this, arguments);
             };
           })();
-        }; // Get all users ptofile
+        }; // Get all users profile
 
         exports.getCurrentProfile = getCurrentProfile;
 
@@ -49883,7 +49899,6 @@ object-assign
               /*#__PURE__*/ _regenerator.default.mark(function _callee10(
                 dispatch
               ) {
-                var res;
                 return _regenerator.default.wrap(
                   function _callee10$(_context10) {
                     while (1) {
@@ -49894,7 +49909,7 @@ object-assign
                               "Are you sure? This can not be undone!"
                             )
                           ) {
-                            _context10.next = 13;
+                            _context10.next = 12;
                             break;
                           }
 
@@ -49905,7 +49920,6 @@ object-assign
                           );
 
                         case 4:
-                          res = _context10.sent;
                           dispatch({
                             type: _types.CLEAR_PROFILE,
                           });
@@ -49918,11 +49932,11 @@ object-assign
                               "danger"
                             )
                           );
-                          _context10.next = 13;
+                          _context10.next = 12;
                           break;
 
-                        case 10:
-                          _context10.prev = 10;
+                        case 9:
+                          _context10.prev = 9;
                           _context10.t0 = _context10["catch"](1);
                           dispatch({
                             type: _types.PROFILE_ERROR,
@@ -49930,7 +49944,7 @@ object-assign
                             status: _context10.t0.response.status,
                           });
 
-                        case 13:
+                        case 12:
                         case "end":
                           return _context10.stop();
                       }
@@ -49938,7 +49952,7 @@ object-assign
                   },
                   _callee10,
                   null,
-                  [[1, 10]]
+                  [[1, 9]]
                 );
               })
             );
@@ -60318,7 +60332,7 @@ object-assign
               {
                 className: "my-2",
               },
-              "Experience Credentials"
+              "Education Credentials"
             ),
             /*#__PURE__*/ _react.default.createElement(
               "table",
@@ -62320,6 +62334,2239 @@ object-assign
         "../../actions/profile": "actions/profile.js",
       },
     ],
+    "components/profiles/ProfileItem.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.default = void 0;
+
+        var _react = _interopRequireDefault(require("react"));
+
+        var _reactRouterDom = require("react-router-dom");
+
+        /* eslint-disable react/prop-types */
+        var ProfileItem = function ProfileItem(props) {
+          var _props$profile = props.profile,
+            _props$profile$user = _props$profile.user,
+            _id = _props$profile$user._id,
+            name = _props$profile$user.name,
+            avatar = _props$profile$user.avatar,
+            status = _props$profile.status,
+            company = _props$profile.company,
+            location = _props$profile.location,
+            skills = _props$profile.skills;
+          return /*#__PURE__*/ _react.default.createElement(
+            "div",
+            {
+              className: "profile bg-light",
+            },
+            /*#__PURE__*/ _react.default.createElement("img", {
+              src: avatar,
+              alt: "",
+              className: "round-img",
+            }),
+            /*#__PURE__*/ _react.default.createElement(
+              "div",
+              null,
+              /*#__PURE__*/ _react.default.createElement("h2", null, name),
+              /*#__PURE__*/ _react.default.createElement(
+                "p",
+                null,
+                status,
+                " ",
+                company &&
+                  /*#__PURE__*/ _react.default.createElement(
+                    "span",
+                    null,
+                    " at ",
+                    company
+                  )
+              ),
+              /*#__PURE__*/ _react.default.createElement(
+                "p",
+                {
+                  className: "my-1",
+                },
+                location &&
+                  /*#__PURE__*/ _react.default.createElement(
+                    "span",
+                    null,
+                    location
+                  )
+              ),
+              /*#__PURE__*/ _react.default.createElement(
+                _reactRouterDom.Link,
+                {
+                  className: "btn btn-primary",
+                  to: "/profile/".concat(_id),
+                },
+                "View Profile"
+              )
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "ul",
+              null,
+              skills.slice(0, 4).map(function (skill, i) {
+                return /*#__PURE__*/ _react.default.createElement(
+                  "li",
+                  {
+                    key: i,
+                    className: "text-primary",
+                  },
+                  /*#__PURE__*/ _react.default.createElement("i", {
+                    className: "fas fa-check",
+                  }),
+                  " ",
+                  skill
+                );
+              })
+            )
+          );
+        };
+
+        var _default = ProfileItem;
+        exports.default = _default;
+      },
+      {
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        react: "../../../node_modules/react/index.js",
+        "react-router-dom":
+          "../../../node_modules/react-router-dom/esm/react-router-dom.js",
+      },
+    ],
+    "components/profiles/Profiles.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.default = void 0;
+
+        var _react = _interopRequireWildcard(require("react"));
+
+        var _reactRedux = require("react-redux");
+
+        var _Spinner = _interopRequireDefault(require("../../views/Spinner"));
+
+        var _profile = require("../../actions/profile");
+
+        var _ProfileItem = _interopRequireDefault(require("./ProfileItem"));
+
+        var Profiles = function Profiles() {
+          var dispatch = (0, _reactRedux.useDispatch)();
+
+          var _useSelector = (0, _reactRedux.useSelector)(function (state) {
+              return state.profile;
+            }),
+            profiles = _useSelector.profiles,
+            loading = _useSelector.loading;
+
+          (0, _react.useEffect)(function () {
+            dispatch((0, _profile.getAllUsersProfile)());
+          }, []);
+          return /*#__PURE__*/ _react.default.createElement(
+            _react.default.Fragment,
+            null,
+            loading
+              ? /*#__PURE__*/ _react.default.createElement(
+                  _Spinner.default,
+                  null
+                )
+              : /*#__PURE__*/ _react.default.createElement(
+                  _react.default.Fragment,
+                  null,
+                  /*#__PURE__*/ _react.default.createElement(
+                    "h1",
+                    {
+                      className: "large text-primary",
+                    },
+                    "Developers"
+                  ),
+                  /*#__PURE__*/ _react.default.createElement(
+                    "p",
+                    {
+                      className: "lead",
+                    },
+                    /*#__PURE__*/ _react.default.createElement(
+                      "i",
+                      {
+                        className: "fab fa-connectdevelop",
+                      },
+                      "Browse and Connect with developers"
+                    )
+                  ),
+                  /*#__PURE__*/ _react.default.createElement(
+                    "div",
+                    {
+                      className: "profiles",
+                    },
+                    profiles.length > 0
+                      ? profiles.map(function (profile) {
+                          return /*#__PURE__*/ _react.default.createElement(
+                            _ProfileItem.default,
+                            {
+                              key: profile._id,
+                              profile: profile,
+                            }
+                          );
+                        })
+                      : /*#__PURE__*/ _react.default.createElement(
+                          "h4",
+                          null,
+                          "No Profiles found..."
+                        )
+                  )
+                )
+          );
+        };
+
+        var _default = Profiles;
+        exports.default = _default;
+      },
+      {
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        "@babel/runtime/helpers/interopRequireWildcard":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireWildcard.js",
+        react: "../../../node_modules/react/index.js",
+        "react-redux": "../../../node_modules/react-redux/es/index.js",
+        "../../views/Spinner": "views/Spinner.js",
+        "../../actions/profile": "actions/profile.js",
+        "./ProfileItem": "components/profiles/ProfileItem.js",
+      },
+    ],
+    "components/profile/ProfileTop.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.default = void 0;
+
+        var _react = _interopRequireDefault(require("react"));
+
+        var ProfileTop = function ProfileTop(_ref) {
+          var _ref$profile = _ref.profile,
+            status = _ref$profile.status,
+            company = _ref$profile.company,
+            location = _ref$profile.location,
+            website = _ref$profile.website,
+            social = _ref$profile.social,
+            _ref$profile$user = _ref$profile.user,
+            name = _ref$profile$user.name,
+            avatar = _ref$profile$user.avatar;
+          return /*#__PURE__*/ _react.default.createElement(
+            "div",
+            {
+              className: "profile-top bg-primary p-2",
+            },
+            /*#__PURE__*/ _react.default.createElement("img", {
+              className: "round-img my-1",
+              src: avatar,
+              alt: "",
+            }),
+            /*#__PURE__*/ _react.default.createElement(
+              "h1",
+              {
+                className: "large",
+              },
+              name
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "p",
+              {
+                className: "lead",
+              },
+              status,
+              " ",
+              company &&
+                /*#__PURE__*/ _react.default.createElement(
+                  "span",
+                  null,
+                  "at ",
+                  company
+                )
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "p",
+              null,
+              location &&
+                /*#__PURE__*/ _react.default.createElement(
+                  "span",
+                  null,
+                  location
+                )
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "div",
+              {
+                className: "icons my-1",
+              },
+              website &&
+                /*#__PURE__*/ _react.default.createElement(
+                  "a",
+                  {
+                    href: website,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  },
+                  /*#__PURE__*/ _react.default.createElement("i", {
+                    className: "fas fa-globe fa-2x",
+                  })
+                ),
+              (social === null || social === void 0
+                ? void 0
+                : social.twitter) &&
+                /*#__PURE__*/ _react.default.createElement(
+                  "a",
+                  {
+                    href: social.twitter,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  },
+                  /*#__PURE__*/ _react.default.createElement("i", {
+                    className: "fab fa-twitter fa-2x",
+                  })
+                ),
+              (social === null || social === void 0
+                ? void 0
+                : social.facebook) &&
+                /*#__PURE__*/ _react.default.createElement(
+                  "a",
+                  {
+                    href: social.facebook,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  },
+                  /*#__PURE__*/ _react.default.createElement("i", {
+                    className: "fab fa-facebook fa-2x",
+                  })
+                ),
+              (social === null || social === void 0
+                ? void 0
+                : social.linkedin) &&
+                /*#__PURE__*/ _react.default.createElement(
+                  "a",
+                  {
+                    href: social.linkedin,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  },
+                  /*#__PURE__*/ _react.default.createElement("i", {
+                    className: "fab fa-linkedin fa-2x",
+                  })
+                ),
+              (social === null || social === void 0
+                ? void 0
+                : social.youtube) &&
+                /*#__PURE__*/ _react.default.createElement(
+                  "a",
+                  {
+                    href: social.youtube,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  },
+                  /*#__PURE__*/ _react.default.createElement("i", {
+                    className: "fab fa-youtube fa-2x",
+                  })
+                ),
+              (social === null || social === void 0
+                ? void 0
+                : social.instagram) &&
+                /*#__PURE__*/ _react.default.createElement(
+                  "a",
+                  {
+                    href: social.instagram,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  },
+                  /*#__PURE__*/ _react.default.createElement("i", {
+                    className: "fab fa-instagram fa-2x",
+                  })
+                )
+            )
+          );
+        };
+
+        var _default = ProfileTop;
+        exports.default = _default;
+      },
+      {
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        react: "../../../node_modules/react/index.js",
+      },
+    ],
+    "components/profile/ProfileAbout.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.default = void 0;
+
+        var _react = _interopRequireDefault(require("react"));
+
+        var ProfileAbout = function ProfileAbout(_ref) {
+          var _ref$profile = _ref.profile,
+            bio = _ref$profile.bio,
+            skills = _ref$profile.skills,
+            name = _ref$profile.user.name;
+          return /*#__PURE__*/ _react.default.createElement(
+            "div",
+            {
+              className: "profile-about bg-light p-2",
+            },
+            bio &&
+              /*#__PURE__*/ _react.default.createElement(
+                _react.default.Fragment,
+                null,
+                /*#__PURE__*/ _react.default.createElement(
+                  "h2",
+                  {
+                    className: "text-primary",
+                  },
+                  name.trim().split(" ")[0],
+                  "s Bio"
+                ),
+                /*#__PURE__*/ _react.default.createElement("p", null, bio),
+                /*#__PURE__*/ _react.default.createElement("div", {
+                  className: "line",
+                })
+              ),
+            /*#__PURE__*/ _react.default.createElement(
+              "h2",
+              {
+                className: "text-primary",
+              },
+              "Skill Set"
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "div",
+              {
+                className: "skills",
+              },
+              skills.map(function (skill, i) {
+                return /*#__PURE__*/ _react.default.createElement(
+                  "div",
+                  {
+                    key: i,
+                    className: "p-1",
+                  },
+                  /*#__PURE__*/ _react.default.createElement("i", {
+                    className: "fas fa-check",
+                  }),
+                  " ",
+                  skill
+                );
+              })
+            )
+          );
+        };
+
+        var _default = ProfileAbout;
+        exports.default = _default;
+      },
+      {
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        react: "../../../node_modules/react/index.js",
+      },
+    ],
+    "components/profile/ProfileExperience.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.default = void 0;
+
+        var _moment = require("moment");
+
+        var _react = _interopRequireDefault(require("react"));
+
+        var _reactMoment = _interopRequireDefault(require("react-moment"));
+
+        var ProfileExperience = function ProfileExperience(_ref) {
+          var _ref$experience = _ref.experience,
+            company = _ref$experience.company,
+            title = _ref$experience.title,
+            location = _ref$experience.location,
+            current = _ref$experience.current,
+            to = _ref$experience.to,
+            from = _ref$experience.from,
+            description = _ref$experience.description;
+          return /*#__PURE__*/ _react.default.createElement(
+            "div",
+            null,
+            /*#__PURE__*/ _react.default.createElement(
+              "h3",
+              {
+                className: "text-dark",
+              },
+              company
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "p",
+              null,
+              /*#__PURE__*/ _react.default.createElement(
+                _reactMoment.default,
+                {
+                  format: "YYYY/MM/DD",
+                },
+                from
+              ),
+              " -",
+              " ",
+              !to
+                ? "Now"
+                : /*#__PURE__*/ _react.default.createElement(
+                    _reactMoment.default,
+                    {
+                      format: "YYYY/MM/DD",
+                    },
+                    to
+                  )
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "p",
+              null,
+              /*#__PURE__*/ _react.default.createElement(
+                "strong",
+                null,
+                "Position: "
+              ),
+              " ",
+              title
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "p",
+              null,
+              /*#__PURE__*/ _react.default.createElement(
+                "strong",
+                null,
+                "Description:"
+              ),
+              " ",
+              description
+            )
+          );
+        };
+
+        var _default = ProfileExperience;
+        exports.default = _default;
+      },
+      {
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        moment: "../../../node_modules/moment/moment.js",
+        react: "../../../node_modules/react/index.js",
+        "react-moment": "../../../node_modules/react-moment/dist/index.js",
+      },
+    ],
+    "components/profile/ProfileEducation.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.default = void 0;
+
+        var _moment = require("moment");
+
+        var _react = _interopRequireDefault(require("react"));
+
+        var _reactMoment = _interopRequireDefault(require("react-moment"));
+
+        var ProfileEducation = function ProfileEducation(_ref) {
+          var _ref$education = _ref.education,
+            school = _ref$education.school,
+            degree = _ref$education.degree,
+            fieldofstudy = _ref$education.fieldofstudy,
+            to = _ref$education.to,
+            from = _ref$education.from,
+            description = _ref$education.description;
+          return /*#__PURE__*/ _react.default.createElement(
+            "div",
+            null,
+            /*#__PURE__*/ _react.default.createElement(
+              "h3",
+              {
+                className: "text-dark",
+              },
+              school
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "p",
+              null,
+              /*#__PURE__*/ _react.default.createElement(
+                _reactMoment.default,
+                {
+                  format: "YYYY/MM/DD",
+                },
+                from
+              ),
+              " -",
+              " ",
+              !to
+                ? "Now"
+                : /*#__PURE__*/ _react.default.createElement(
+                    _reactMoment.default,
+                    {
+                      format: "YYYY/MM/DD",
+                    },
+                    to
+                  )
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "p",
+              null,
+              /*#__PURE__*/ _react.default.createElement(
+                "strong",
+                null,
+                "Degree: "
+              ),
+              " ",
+              degree
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "p",
+              null,
+              /*#__PURE__*/ _react.default.createElement(
+                "strong",
+                null,
+                "Field Of Study: "
+              ),
+              " ",
+              fieldofstudy
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "p",
+              null,
+              /*#__PURE__*/ _react.default.createElement(
+                "strong",
+                null,
+                "Description:"
+              ),
+              " ",
+              description
+            )
+          );
+        };
+
+        var _default = ProfileEducation;
+        exports.default = _default;
+      },
+      {
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        moment: "../../../node_modules/moment/moment.js",
+        react: "../../../node_modules/react/index.js",
+        "react-moment": "../../../node_modules/react-moment/dist/index.js",
+      },
+    ],
+    "components/profile/ProfileGithub.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.default = void 0;
+
+        var _react = _interopRequireWildcard(require("react"));
+
+        var _reactRedux = require("react-redux");
+
+        var _profile = require("../../actions/profile");
+
+        var _Spinner = _interopRequireDefault(require("../../views/Spinner"));
+
+        var ProfileGithub = function ProfileGithub(_ref) {
+          var username = _ref.username;
+          var dispatch = (0, _reactRedux.useDispatch)();
+
+          var _useSelector = (0, _reactRedux.useSelector)(function (state) {
+              return state.profile;
+            }),
+            repos = _useSelector.repos;
+
+          (0, _react.useEffect)(
+            function () {
+              dispatch((0, _profile.getGithubRepos)(username));
+            },
+            [_profile.getGithubRepos, username]
+          );
+          return /*#__PURE__*/ _react.default.createElement(
+            "div",
+            {
+              className: "profile-github",
+            },
+            /*#__PURE__*/ _react.default.createElement(
+              "h2",
+              {
+                className: "text-primary my-1",
+              },
+              "Github Repos"
+            ),
+            repos === null
+              ? /*#__PURE__*/ _react.default.createElement(
+                  _Spinner.default,
+                  null
+                )
+              : repos.map(function (repo) {
+                  return /*#__PURE__*/ _react.default.createElement(
+                    "div",
+                    {
+                      key: repo._id,
+                      className: "repo bg-white p-1 my-1",
+                    },
+                    /*#__PURE__*/ _react.default.createElement(
+                      "div",
+                      null,
+                      /*#__PURE__*/ _react.default.createElement(
+                        "h4",
+                        null,
+                        /*#__PURE__*/ _react.default.createElement(
+                          "a",
+                          {
+                            href: repo.html_url,
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                          },
+                          repo.name
+                        )
+                      ),
+                      /*#__PURE__*/ _react.default.createElement(
+                        "p",
+                        null,
+                        repo.description
+                      )
+                    ),
+                    /*#__PURE__*/ _react.default.createElement(
+                      "div",
+                      null,
+                      /*#__PURE__*/ _react.default.createElement(
+                        "ul",
+                        null,
+                        /*#__PURE__*/ _react.default.createElement(
+                          "li",
+                          {
+                            className: "badge badge-primary",
+                          },
+                          "Stars: ",
+                          repo.stargazers_count
+                        ),
+                        /*#__PURE__*/ _react.default.createElement(
+                          "li",
+                          {
+                            className: "badge badge-dark",
+                          },
+                          "Watchers: ",
+                          repo.watchers_count
+                        ),
+                        /*#__PURE__*/ _react.default.createElement(
+                          "li",
+                          {
+                            className: "badge badge-ligt",
+                          },
+                          "Forks: ",
+                          repo.forks_count
+                        )
+                      )
+                    )
+                  );
+                })
+          );
+        };
+
+        var _default = ProfileGithub;
+        exports.default = _default;
+      },
+      {
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        "@babel/runtime/helpers/interopRequireWildcard":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireWildcard.js",
+        react: "../../../node_modules/react/index.js",
+        "react-redux": "../../../node_modules/react-redux/es/index.js",
+        "../../actions/profile": "actions/profile.js",
+        "../../views/Spinner": "views/Spinner.js",
+      },
+    ],
+    "components/profile/Profile.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.default = void 0;
+
+        var _react = _interopRequireWildcard(require("react"));
+
+        var _reactRouterDom = require("react-router-dom");
+
+        var _reactRedux = require("react-redux");
+
+        var _profile = require("../../actions/profile");
+
+        var _Spinner = _interopRequireDefault(require("../../views/Spinner"));
+
+        var _ProfileTop = _interopRequireDefault(require("./ProfileTop"));
+
+        var _ProfileAbout = _interopRequireDefault(require("./ProfileAbout"));
+
+        var _ProfileExperience = _interopRequireDefault(
+          require("./ProfileExperience")
+        );
+
+        var _ProfileEducation = _interopRequireDefault(
+          require("./ProfileEducation")
+        );
+
+        var _ProfileGithub = _interopRequireDefault(require("./ProfileGithub"));
+
+        var Profile = function Profile(_ref) {
+          var match = _ref.match;
+          var dispatch = (0, _reactRedux.useDispatch)();
+          var auth = (0, _reactRedux.useSelector)(function (state) {
+            return state.auth;
+          });
+
+          var _useSelector = (0, _reactRedux.useSelector)(function (state) {
+              return state.profile;
+            }),
+            profile = _useSelector.profile,
+            loading = _useSelector.loading;
+
+          (0, _react.useEffect)(
+            function () {
+              dispatch((0, _profile.getProfileById)(match.params.id));
+            },
+            [_profile.getProfileById, match.params.id]
+          );
+
+          if (!auth.isAuthenticated) {
+            return /*#__PURE__*/ _react.default.createElement(
+              _reactRouterDom.Redirect,
+              {
+                to: "/login",
+              }
+            );
+          }
+
+          return /*#__PURE__*/ _react.default.createElement(
+            _react.default.Fragment,
+            null,
+            profile === null || loading
+              ? /*#__PURE__*/ _react.default.createElement(
+                  _Spinner.default,
+                  null
+                )
+              : /*#__PURE__*/ _react.default.createElement(
+                  _react.default.Fragment,
+                  null,
+                  /*#__PURE__*/ _react.default.createElement(
+                    _reactRouterDom.Link,
+                    {
+                      to: "/profiles",
+                      className: "btn btn-light",
+                    },
+                    "Back To Profiles"
+                  ),
+                  auth.isAuthenticated &&
+                    auth.loading === false &&
+                    auth.user._id === profile.user._id &&
+                    /*#__PURE__*/ _react.default.createElement(
+                      _reactRouterDom.Link,
+                      {
+                        to: "/edit-profile",
+                        className: "btn btn-dark",
+                      },
+                      "Edit Profile"
+                    ),
+                  /*#__PURE__*/ _react.default.createElement(
+                    "div",
+                    {
+                      className: "profile-grid my-1",
+                    },
+                    /*#__PURE__*/ _react.default.createElement(
+                      _ProfileTop.default,
+                      {
+                        profile: profile,
+                      }
+                    ),
+                    /*#__PURE__*/ _react.default.createElement(
+                      _ProfileAbout.default,
+                      {
+                        profile: profile,
+                      }
+                    ),
+                    /*#__PURE__*/ _react.default.createElement(
+                      "div",
+                      {
+                        className: "profile-exp bg-white p-2",
+                      },
+                      /*#__PURE__*/ _react.default.createElement(
+                        "h2",
+                        {
+                          className: "text-primary",
+                        },
+                        "Experience"
+                      ),
+                      profile.experience.length > 0
+                        ? /*#__PURE__*/ _react.default.createElement(
+                            _react.default.Fragment,
+                            null,
+                            profile.experience.map(function (exp) {
+                              return /*#__PURE__*/ _react.default.createElement(
+                                _ProfileExperience.default,
+                                {
+                                  key: exp._id,
+                                  experience: exp,
+                                }
+                              );
+                            })
+                          )
+                        : /*#__PURE__*/ _react.default.createElement(
+                            "h4",
+                            null,
+                            "No experience credentials"
+                          )
+                    ),
+                    /*#__PURE__*/ _react.default.createElement(
+                      "div",
+                      {
+                        className: "profile-edu bg-white p-2",
+                      },
+                      /*#__PURE__*/ _react.default.createElement(
+                        "h2",
+                        {
+                          className: "text-primary",
+                        },
+                        "Education"
+                      ),
+                      profile.education.length > 0
+                        ? /*#__PURE__*/ _react.default.createElement(
+                            _react.default.Fragment,
+                            null,
+                            profile.education.map(function (edu) {
+                              return /*#__PURE__*/ _react.default.createElement(
+                                _ProfileEducation.default,
+                                {
+                                  key: edu._id,
+                                  education: edu,
+                                }
+                              );
+                            })
+                          )
+                        : /*#__PURE__*/ _react.default.createElement(
+                            "h4",
+                            null,
+                            "No education credentials"
+                          )
+                    ),
+                    profile.githubusername &&
+                      /*#__PURE__*/ _react.default.createElement(
+                        _ProfileGithub.default,
+                        {
+                          username: profile.githubusername,
+                        }
+                      )
+                  )
+                )
+          );
+        };
+
+        var _default = Profile;
+        exports.default = _default;
+      },
+      {
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        "@babel/runtime/helpers/interopRequireWildcard":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireWildcard.js",
+        react: "../../../node_modules/react/index.js",
+        "react-router-dom":
+          "../../../node_modules/react-router-dom/esm/react-router-dom.js",
+        "react-redux": "../../../node_modules/react-redux/es/index.js",
+        "../../actions/profile": "actions/profile.js",
+        "../../views/Spinner": "views/Spinner.js",
+        "./ProfileTop": "components/profile/ProfileTop.js",
+        "./ProfileAbout": "components/profile/ProfileAbout.js",
+        "./ProfileExperience": "components/profile/ProfileExperience.js",
+        "./ProfileEducation": "components/profile/ProfileEducation.js",
+        "./ProfileGithub": "components/profile/ProfileGithub.js",
+      },
+    ],
+    "actions/post.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.deleteComment = exports.addComment = exports.addPost = exports.deletePost = exports.removeLike = exports.addLike = exports.getPost = exports.getPosts = void 0;
+
+        var _regenerator = _interopRequireDefault(
+          require("@babel/runtime/regenerator")
+        );
+
+        var _asyncToGenerator2 = _interopRequireDefault(
+          require("@babel/runtime/helpers/asyncToGenerator")
+        );
+
+        var _axios = _interopRequireDefault(require("axios"));
+
+        var _alert = require("./alert");
+
+        var _types = require("./types");
+
+        // Get Posts
+        var getPosts = function getPosts() {
+          return /*#__PURE__*/ (function () {
+            var _ref = (0, _asyncToGenerator2.default)(
+              /*#__PURE__*/ _regenerator.default.mark(function _callee(
+                dispatch
+              ) {
+                var res;
+                return _regenerator.default.wrap(
+                  function _callee$(_context) {
+                    while (1) {
+                      switch ((_context.prev = _context.next)) {
+                        case 0:
+                          _context.prev = 0;
+                          _context.next = 3;
+                          return _axios.default.get(
+                            "".concat("http://localhost:7777", "/api/posts")
+                          );
+
+                        case 3:
+                          res = _context.sent;
+                          dispatch({
+                            type: _types.GET_POSTS,
+                            payload: res.data,
+                          });
+                          _context.next = 10;
+                          break;
+
+                        case 7:
+                          _context.prev = 7;
+                          _context.t0 = _context["catch"](0);
+                          dispatch({
+                            type: _types.POST_ERROR,
+                            payload: _context.t0.response.statusText,
+                            status: _context.t0.response.status,
+                          });
+
+                        case 10:
+                        case "end":
+                          return _context.stop();
+                      }
+                    }
+                  },
+                  _callee,
+                  null,
+                  [[0, 7]]
+                );
+              })
+            );
+
+            return function (_x) {
+              return _ref.apply(this, arguments);
+            };
+          })();
+        }; // GET POST
+
+        exports.getPosts = getPosts;
+
+        var getPost = function getPost(id) {
+          return /*#__PURE__*/ (function () {
+            var _ref2 = (0, _asyncToGenerator2.default)(
+              /*#__PURE__*/ _regenerator.default.mark(function _callee2(
+                dispatch
+              ) {
+                var res;
+                return _regenerator.default.wrap(
+                  function _callee2$(_context2) {
+                    while (1) {
+                      switch ((_context2.prev = _context2.next)) {
+                        case 0:
+                          _context2.prev = 0;
+                          _context2.next = 3;
+                          return _axios.default.get(
+                            ""
+                              .concat("http://localhost:7777", "/api/posts/")
+                              .concat(id)
+                          );
+
+                        case 3:
+                          res = _context2.sent;
+                          dispatch({
+                            type: _types.GET_POST,
+                            payload: res.data,
+                          });
+                          _context2.next = 10;
+                          break;
+
+                        case 7:
+                          _context2.prev = 7;
+                          _context2.t0 = _context2["catch"](0);
+                          dispatch({
+                            type: _types.POST_ERROR,
+                            payload: _context2.t0.response.statusText,
+                            status: _context2.t0.response.status,
+                          });
+
+                        case 10:
+                        case "end":
+                          return _context2.stop();
+                      }
+                    }
+                  },
+                  _callee2,
+                  null,
+                  [[0, 7]]
+                );
+              })
+            );
+
+            return function (_x2) {
+              return _ref2.apply(this, arguments);
+            };
+          })();
+        }; // ADD LIKE
+
+        exports.getPost = getPost;
+
+        var addLike = function addLike(postId) {
+          return /*#__PURE__*/ (function () {
+            var _ref3 = (0, _asyncToGenerator2.default)(
+              /*#__PURE__*/ _regenerator.default.mark(function _callee3(
+                dispatch
+              ) {
+                var res;
+                return _regenerator.default.wrap(
+                  function _callee3$(_context3) {
+                    while (1) {
+                      switch ((_context3.prev = _context3.next)) {
+                        case 0:
+                          _context3.prev = 0;
+                          _context3.next = 3;
+                          return _axios.default.put(
+                            ""
+                              .concat(
+                                "http://localhost:7777",
+                                "/api/posts/like/"
+                              )
+                              .concat(postId)
+                          );
+
+                        case 3:
+                          res = _context3.sent;
+                          dispatch({
+                            type: _types.UPDATE_LIKES,
+                            payload: {
+                              id: postId,
+                              likes: res.data,
+                            },
+                          });
+                          _context3.next = 10;
+                          break;
+
+                        case 7:
+                          _context3.prev = 7;
+                          _context3.t0 = _context3["catch"](0);
+                          dispatch({
+                            type: _types.POST_ERROR,
+                            payload: _context3.t0.response.statusText,
+                            status: _context3.t0.response.status,
+                          });
+
+                        case 10:
+                        case "end":
+                          return _context3.stop();
+                      }
+                    }
+                  },
+                  _callee3,
+                  null,
+                  [[0, 7]]
+                );
+              })
+            );
+
+            return function (_x3) {
+              return _ref3.apply(this, arguments);
+            };
+          })();
+        }; // REMOVE LIKE
+
+        exports.addLike = addLike;
+
+        var removeLike = function removeLike(postId) {
+          return /*#__PURE__*/ (function () {
+            var _ref4 = (0, _asyncToGenerator2.default)(
+              /*#__PURE__*/ _regenerator.default.mark(function _callee4(
+                dispatch
+              ) {
+                var res;
+                return _regenerator.default.wrap(
+                  function _callee4$(_context4) {
+                    while (1) {
+                      switch ((_context4.prev = _context4.next)) {
+                        case 0:
+                          _context4.prev = 0;
+                          _context4.next = 3;
+                          return _axios.default.put(
+                            ""
+                              .concat(
+                                "http://localhost:7777",
+                                "/api/posts/unlike/"
+                              )
+                              .concat(postId)
+                          );
+
+                        case 3:
+                          res = _context4.sent;
+                          dispatch({
+                            type: _types.UPDATE_LIKES,
+                            payload: {
+                              id: postId,
+                              likes: res.data,
+                            },
+                          });
+                          _context4.next = 10;
+                          break;
+
+                        case 7:
+                          _context4.prev = 7;
+                          _context4.t0 = _context4["catch"](0);
+                          dispatch({
+                            type: _types.POST_ERROR,
+                            payload: _context4.t0.response.statusText,
+                            status: _context4.t0.response.status,
+                          });
+
+                        case 10:
+                        case "end":
+                          return _context4.stop();
+                      }
+                    }
+                  },
+                  _callee4,
+                  null,
+                  [[0, 7]]
+                );
+              })
+            );
+
+            return function (_x4) {
+              return _ref4.apply(this, arguments);
+            };
+          })();
+        }; // DELETE POST
+
+        exports.removeLike = removeLike;
+
+        var deletePost = function deletePost(id) {
+          return /*#__PURE__*/ (function () {
+            var _ref5 = (0, _asyncToGenerator2.default)(
+              /*#__PURE__*/ _regenerator.default.mark(function _callee5(
+                dispatch
+              ) {
+                return _regenerator.default.wrap(
+                  function _callee5$(_context5) {
+                    while (1) {
+                      switch ((_context5.prev = _context5.next)) {
+                        case 0:
+                          _context5.prev = 0;
+                          _context5.next = 3;
+                          return _axios.default.delete(
+                            ""
+                              .concat("http://localhost:7777", "/api/posts/")
+                              .concat(id)
+                          );
+
+                        case 3:
+                          dispatch({
+                            type: _types.DELETE_POST,
+                            payload: id,
+                          });
+                          dispatch(
+                            (0, _alert.setAlert)("Post Removed", "success")
+                          );
+                          _context5.next = 10;
+                          break;
+
+                        case 7:
+                          _context5.prev = 7;
+                          _context5.t0 = _context5["catch"](0);
+                          dispatch({
+                            type: _types.POST_ERROR,
+                            payload: _context5.t0.response.statusText,
+                            status: _context5.t0.response.status,
+                          });
+
+                        case 10:
+                        case "end":
+                          return _context5.stop();
+                      }
+                    }
+                  },
+                  _callee5,
+                  null,
+                  [[0, 7]]
+                );
+              })
+            );
+
+            return function (_x5) {
+              return _ref5.apply(this, arguments);
+            };
+          })();
+        }; // create Post
+
+        exports.deletePost = deletePost;
+
+        var addPost = function addPost(formData) {
+          return /*#__PURE__*/ (function () {
+            var _ref6 = (0, _asyncToGenerator2.default)(
+              /*#__PURE__*/ _regenerator.default.mark(function _callee6(
+                dispatch
+              ) {
+                var config, res;
+                return _regenerator.default.wrap(
+                  function _callee6$(_context6) {
+                    while (1) {
+                      switch ((_context6.prev = _context6.next)) {
+                        case 0:
+                          config = {
+                            headers: {
+                              "Content-Type": "application/json",
+                            },
+                          };
+                          _context6.prev = 1;
+                          _context6.next = 4;
+                          return _axios.default.post(
+                            "".concat("http://localhost:7777", "/api/posts"),
+                            formData,
+                            config
+                          );
+
+                        case 4:
+                          res = _context6.sent;
+                          dispatch({
+                            type: _types.ADD_POST,
+                            payload: res.data,
+                          });
+                          dispatch(
+                            (0, _alert.setAlert)("Post Created", "success")
+                          );
+                          _context6.next = 12;
+                          break;
+
+                        case 9:
+                          _context6.prev = 9;
+                          _context6.t0 = _context6["catch"](1);
+                          dispatch({
+                            type: _types.POST_ERROR,
+                            payload: _context6.t0.response.statusText,
+                            status: _context6.t0.response.status,
+                          });
+
+                        case 12:
+                        case "end":
+                          return _context6.stop();
+                      }
+                    }
+                  },
+                  _callee6,
+                  null,
+                  [[1, 9]]
+                );
+              })
+            );
+
+            return function (_x6) {
+              return _ref6.apply(this, arguments);
+            };
+          })();
+        }; // ADD COMMENT
+
+        exports.addPost = addPost;
+
+        var addComment = function addComment(postId, formData) {
+          return /*#__PURE__*/ (function () {
+            var _ref7 = (0, _asyncToGenerator2.default)(
+              /*#__PURE__*/ _regenerator.default.mark(function _callee7(
+                dispatch
+              ) {
+                var config, res;
+                return _regenerator.default.wrap(
+                  function _callee7$(_context7) {
+                    while (1) {
+                      switch ((_context7.prev = _context7.next)) {
+                        case 0:
+                          config = {
+                            headers: {
+                              "Content-Type": "application/json",
+                            },
+                          };
+                          _context7.prev = 1;
+                          _context7.next = 4;
+                          return _axios.default.post(
+                            ""
+                              .concat(
+                                "http://localhost:7777",
+                                "/api/posts/comment/"
+                              )
+                              .concat(postId),
+                            formData,
+                            config
+                          );
+
+                        case 4:
+                          res = _context7.sent;
+                          dispatch({
+                            type: _types.ADD_COMMENT,
+                            payload: res.data,
+                          });
+                          dispatch(
+                            (0, _alert.setAlert)("Comment Added", "success")
+                          );
+                          _context7.next = 12;
+                          break;
+
+                        case 9:
+                          _context7.prev = 9;
+                          _context7.t0 = _context7["catch"](1);
+                          dispatch({
+                            type: _types.POST_ERROR,
+                            payload: _context7.t0.response.statusText,
+                            status: _context7.t0.response.status,
+                          });
+
+                        case 12:
+                        case "end":
+                          return _context7.stop();
+                      }
+                    }
+                  },
+                  _callee7,
+                  null,
+                  [[1, 9]]
+                );
+              })
+            );
+
+            return function (_x7) {
+              return _ref7.apply(this, arguments);
+            };
+          })();
+        }; // DELETE COMMENT
+
+        exports.addComment = addComment;
+
+        var deleteComment = function deleteComment(postId, commentId) {
+          return /*#__PURE__*/ (function () {
+            var _ref8 = (0, _asyncToGenerator2.default)(
+              /*#__PURE__*/ _regenerator.default.mark(function _callee8(
+                dispatch
+              ) {
+                var res;
+                return _regenerator.default.wrap(
+                  function _callee8$(_context8) {
+                    while (1) {
+                      switch ((_context8.prev = _context8.next)) {
+                        case 0:
+                          _context8.prev = 0;
+                          _context8.next = 3;
+                          return _axios.default.delete(
+                            ""
+                              .concat(
+                                "http://localhost:7777",
+                                "/api/posts/comment/"
+                              )
+                              .concat(postId, "/")
+                              .concat(commentId)
+                          );
+
+                        case 3:
+                          res = _context8.sent;
+                          dispatch({
+                            type: _types.REMOVE_COMMENT,
+                            payload: commentId,
+                          });
+                          dispatch(
+                            (0, _alert.setAlert)("Comment Removed", "success")
+                          );
+                          _context8.next = 11;
+                          break;
+
+                        case 8:
+                          _context8.prev = 8;
+                          _context8.t0 = _context8["catch"](0);
+                          dispatch({
+                            type: _types.POST_ERROR,
+                            payload: _context8.t0.response.statusText,
+                            status: _context8.t0.response.status,
+                          });
+
+                        case 11:
+                        case "end":
+                          return _context8.stop();
+                      }
+                    }
+                  },
+                  _callee8,
+                  null,
+                  [[0, 8]]
+                );
+              })
+            );
+
+            return function (_x8) {
+              return _ref8.apply(this, arguments);
+            };
+          })();
+        };
+
+        exports.deleteComment = deleteComment;
+      },
+      {
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        "@babel/runtime/regenerator":
+          "../../../node_modules/@babel/runtime/regenerator/index.js",
+        "@babel/runtime/helpers/asyncToGenerator":
+          "../../../node_modules/@babel/runtime/helpers/asyncToGenerator.js",
+        axios: "../../../node_modules/axios/index.js",
+        "./alert": "actions/alert.js",
+        "./types": "actions/types.js",
+      },
+    ],
+    "components/posts/PostForm.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.default = void 0;
+
+        var _slicedToArray2 = _interopRequireDefault(
+          require("@babel/runtime/helpers/slicedToArray")
+        );
+
+        var _react = _interopRequireWildcard(require("react"));
+
+        var _reactRedux = require("react-redux");
+
+        var _post = require("../../actions/post");
+
+        var PostForm = function PostForm() {
+          var dispatch = (0, _reactRedux.useDispatch)();
+
+          var _useState = (0, _react.useState)(""),
+            _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+            text = _useState2[0],
+            setText = _useState2[1];
+
+          return /*#__PURE__*/ _react.default.createElement(
+            "div",
+            {
+              className: "post-form",
+            },
+            /*#__PURE__*/ _react.default.createElement(
+              "div",
+              {
+                className: "bg-primary p",
+              },
+              /*#__PURE__*/ _react.default.createElement(
+                "h3",
+                null,
+                "Say Something..."
+              )
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "form",
+              {
+                className: "form my-1",
+                onSubmit: function onSubmit(e) {
+                  e.preventDefault();
+                  dispatch(
+                    (0, _post.addPost)({
+                      text: text,
+                    })
+                  );
+                  setText("");
+                },
+              },
+              /*#__PURE__*/ _react.default.createElement("textarea", {
+                name: "text",
+                cols: "30",
+                rows: "5",
+                placeholder: "Comment on this post",
+                value: text,
+                onChange: function onChange(e) {
+                  return setText(e.target.value);
+                },
+                required: true,
+              }),
+              /*#__PURE__*/ _react.default.createElement("input", {
+                type: "submit",
+                className: "btn btn-dark my-1",
+                value: "Submit",
+              })
+            )
+          );
+        };
+
+        var _default = PostForm;
+        exports.default = _default;
+      },
+      {
+        "@babel/runtime/helpers/interopRequireWildcard":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireWildcard.js",
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        "@babel/runtime/helpers/slicedToArray":
+          "../../../node_modules/@babel/runtime/helpers/slicedToArray.js",
+        react: "../../../node_modules/react/index.js",
+        "react-redux": "../../../node_modules/react-redux/es/index.js",
+        "../../actions/post": "actions/post.js",
+      },
+    ],
+    "components/posts/PostItem.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.default = void 0;
+
+        var _react = _interopRequireDefault(require("react"));
+
+        var _reactRouterDom = require("react-router-dom");
+
+        var _reactMoment = _interopRequireDefault(require("react-moment"));
+
+        var _reactRedux = require("react-redux");
+
+        var _post = require("../../actions/post");
+
+        var PostItem = function PostItem(_ref) {
+          var _ref$post = _ref.post,
+            _id = _ref$post._id,
+            text = _ref$post.text,
+            name = _ref$post.name,
+            avatar = _ref$post.avatar,
+            user = _ref$post.user,
+            likes = _ref$post.likes,
+            comments = _ref$post.comments,
+            date = _ref$post.date,
+            showActions = _ref.showActions;
+          var auth = (0, _reactRedux.useSelector)(function (state) {
+            return state.auth;
+          });
+          var dispatch = (0, _reactRedux.useDispatch)();
+          return /*#__PURE__*/ _react.default.createElement(
+            "div",
+            {
+              className: "post bg-white p-1 my-1",
+            },
+            /*#__PURE__*/ _react.default.createElement(
+              "div",
+              null,
+              /*#__PURE__*/ _react.default.createElement(
+                _reactRouterDom.Link,
+                {
+                  to: "/profile/".concat(user),
+                },
+                /*#__PURE__*/ _react.default.createElement("img", {
+                  className: "round-img",
+                  src: avatar,
+                  alt: "Avatar",
+                }),
+                /*#__PURE__*/ _react.default.createElement("h4", null, name)
+              )
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "div",
+              null,
+              /*#__PURE__*/ _react.default.createElement(
+                "p",
+                {
+                  className: "my-1",
+                },
+                text
+              ),
+              /*#__PURE__*/ _react.default.createElement(
+                "p",
+                {
+                  className: "post-date",
+                },
+                "Posted on ",
+                /*#__PURE__*/ _react.default.createElement(
+                  _reactMoment.default,
+                  {
+                    format: "YYYY/MM/DD",
+                  },
+                  date
+                )
+              ),
+              showActions &&
+                /*#__PURE__*/ _react.default.createElement(
+                  _react.default.Fragment,
+                  null,
+                  /*#__PURE__*/ _react.default.createElement(
+                    "button",
+                    {
+                      type: "button",
+                      onClick: function onClick(e) {
+                        return dispatch((0, _post.addLike)(_id));
+                      },
+                      className: "btn btn-light",
+                    },
+                    /*#__PURE__*/ _react.default.createElement("i", {
+                      className: "fas fa-thumbs-up",
+                    }),
+                    " ",
+                    likes.length > 0 &&
+                      /*#__PURE__*/ _react.default.createElement(
+                        "span",
+                        null,
+                        likes.length
+                      )
+                  ),
+                  /*#__PURE__*/ _react.default.createElement(
+                    "button",
+                    {
+                      type: "button",
+                      onClick: function onClick() {
+                        return dispatch((0, _post.removeLike)(_id));
+                      },
+                      className: "btn btn-light",
+                    },
+                    /*#__PURE__*/ _react.default.createElement("i", {
+                      className: "fas fa-thumbs-down",
+                    })
+                  ),
+                  /*#__PURE__*/ _react.default.createElement(
+                    _reactRouterDom.Link,
+                    {
+                      to: "/posts/".concat(_id),
+                      className: "btn btn-primary",
+                    },
+                    "Discussion",
+                    " ",
+                    comments.length > 0 &&
+                      /*#__PURE__*/ _react.default.createElement(
+                        "span",
+                        {
+                          className: "comment-count",
+                        },
+                        comments.length
+                      )
+                  ),
+                  !auth.loading &&
+                    user === auth.user._id &&
+                    /*#__PURE__*/ _react.default.createElement(
+                      "button",
+                      {
+                        type: "button",
+                        onClick: function onClick() {
+                          return dispatch((0, _post.deletePost)(_id));
+                        },
+                        className: "btn btn-danger",
+                      },
+                      /*#__PURE__*/ _react.default.createElement("i", {
+                        className: "fas fa-times",
+                      })
+                    )
+                )
+            )
+          );
+        };
+
+        PostItem.defaultProps = {
+          showActions: true,
+        };
+        var _default = PostItem;
+        exports.default = _default;
+      },
+      {
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        react: "../../../node_modules/react/index.js",
+        "react-router-dom":
+          "../../../node_modules/react-router-dom/esm/react-router-dom.js",
+        "react-moment": "../../../node_modules/react-moment/dist/index.js",
+        "react-redux": "../../../node_modules/react-redux/es/index.js",
+        "../../actions/post": "actions/post.js",
+      },
+    ],
+    "components/posts/Posts.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.default = void 0;
+
+        var _react = _interopRequireWildcard(require("react"));
+
+        var _reactRedux = require("react-redux");
+
+        var _post = require("../../actions/post");
+
+        var _Spinner = _interopRequireDefault(require("../../views/Spinner"));
+
+        var _PostForm = _interopRequireDefault(require("./PostForm"));
+
+        var _PostItem = _interopRequireDefault(require("./PostItem"));
+
+        var Posts = function Posts() {
+          var _useSelector = (0, _reactRedux.useSelector)(function (state) {
+              return state.post;
+            }),
+            posts = _useSelector.posts,
+            loading = _useSelector.loading;
+
+          var dispatch = (0, _reactRedux.useDispatch)();
+          (0, _react.useEffect)(
+            function () {
+              dispatch((0, _post.getPosts)());
+            },
+            [_post.getPosts]
+          );
+          return loading
+            ? /*#__PURE__*/ _react.default.createElement(_Spinner.default, null)
+            : /*#__PURE__*/ _react.default.createElement(
+                _react.default.Fragment,
+                null,
+                /*#__PURE__*/ _react.default.createElement(
+                  "h1",
+                  {
+                    className: "large text-primary",
+                  },
+                  "Posts"
+                ),
+                /*#__PURE__*/ _react.default.createElement(
+                  "p",
+                  {
+                    className: "lead",
+                  },
+                  /*#__PURE__*/ _react.default.createElement("i", {
+                    className: "fas fa-user",
+                  }),
+                  " Welcome to the community"
+                ),
+                /*#__PURE__*/ _react.default.createElement(
+                  _PostForm.default,
+                  null
+                ),
+                /*#__PURE__*/ _react.default.createElement(
+                  "div",
+                  {
+                    className: "posts",
+                  },
+                  posts.map(function (post) {
+                    return /*#__PURE__*/ _react.default.createElement(
+                      _PostItem.default,
+                      {
+                        key: post._id,
+                        post: post,
+                      }
+                    );
+                  })
+                )
+              );
+        };
+
+        var _default = Posts;
+        exports.default = _default;
+      },
+      {
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        "@babel/runtime/helpers/interopRequireWildcard":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireWildcard.js",
+        react: "../../../node_modules/react/index.js",
+        "react-redux": "../../../node_modules/react-redux/es/index.js",
+        "../../actions/post": "actions/post.js",
+        "../../views/Spinner": "views/Spinner.js",
+        "./PostForm": "components/posts/PostForm.js",
+        "./PostItem": "components/posts/PostItem.js",
+      },
+    ],
+    "components/post/CommentForm.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.default = void 0;
+
+        var _slicedToArray2 = _interopRequireDefault(
+          require("@babel/runtime/helpers/slicedToArray")
+        );
+
+        var _react = _interopRequireWildcard(require("react"));
+
+        var _reactRedux = require("react-redux");
+
+        var _post = require("../../actions/post");
+
+        var CommentForm = function CommentForm(_ref) {
+          var postId = _ref.postId;
+
+          var _useState = (0, _react.useState)(""),
+            _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+            text = _useState2[0],
+            setText = _useState2[1];
+
+          var dispatch = (0, _reactRedux.useDispatch)();
+          return /*#__PURE__*/ _react.default.createElement(
+            "div",
+            {
+              className: "post-form",
+            },
+            /*#__PURE__*/ _react.default.createElement(
+              "div",
+              {
+                className: "bg-primary p",
+              },
+              /*#__PURE__*/ _react.default.createElement(
+                "h3",
+                null,
+                "Leave a Comment..."
+              )
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "form",
+              {
+                className: "form my-1",
+                onSubmit: function onSubmit(e) {
+                  e.preventDefault();
+                  dispatch(
+                    (0, _post.addComment)(postId, {
+                      text: text,
+                    })
+                  );
+                  setText("");
+                },
+              },
+              /*#__PURE__*/ _react.default.createElement("textarea", {
+                name: "text",
+                cols: "30",
+                rows: "5",
+                placeholder: "Comment on this post",
+                value: text,
+                onChange: function onChange(e) {
+                  return setText(e.target.value);
+                },
+                required: true,
+              }),
+              /*#__PURE__*/ _react.default.createElement("input", {
+                type: "submit",
+                className: "btn btn-dark my-1",
+                value: "Submit",
+              })
+            )
+          );
+        };
+
+        var _default = CommentForm;
+        exports.default = _default;
+      },
+      {
+        "@babel/runtime/helpers/interopRequireWildcard":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireWildcard.js",
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        "@babel/runtime/helpers/slicedToArray":
+          "../../../node_modules/@babel/runtime/helpers/slicedToArray.js",
+        react: "../../../node_modules/react/index.js",
+        "react-redux": "../../../node_modules/react-redux/es/index.js",
+        "../../actions/post": "actions/post.js",
+      },
+    ],
+    "components/post/CommentItem.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.default = void 0;
+
+        var _react = _interopRequireDefault(require("react"));
+
+        var _reactRedux = require("react-redux");
+
+        var _reactRouterDom = require("react-router-dom");
+
+        var _reactMoment = _interopRequireDefault(require("react-moment"));
+
+        var _post = require("../../actions/post");
+
+        /* eslint-disable react/prop-types */
+        var CommentItem = function CommentItem(_ref) {
+          var postId = _ref.postId,
+            _ref$comment = _ref.comment,
+            _id = _ref$comment._id,
+            text = _ref$comment.text,
+            name = _ref$comment.name,
+            avatar = _ref$comment.avatar,
+            user = _ref$comment.user,
+            date = _ref$comment.date;
+          var auth = (0, _reactRedux.useSelector)(function (state) {
+            return state.auth;
+          });
+          var dispatch = (0, _reactRedux.useDispatch)();
+          return /*#__PURE__*/ _react.default.createElement(
+            "div",
+            null,
+            /*#__PURE__*/ _react.default.createElement(
+              "div",
+              {
+                className: "post bg-white p-1 my-1",
+              },
+              /*#__PURE__*/ _react.default.createElement(
+                "div",
+                null,
+                /*#__PURE__*/ _react.default.createElement(
+                  _reactRouterDom.Link,
+                  {
+                    to: "/profile/".concat(user),
+                  },
+                  /*#__PURE__*/ _react.default.createElement("img", {
+                    className: "round-img",
+                    src: avatar,
+                    alt: "Avatar",
+                  }),
+                  /*#__PURE__*/ _react.default.createElement("h4", null, name)
+                )
+              ),
+              /*#__PURE__*/ _react.default.createElement(
+                "div",
+                null,
+                /*#__PURE__*/ _react.default.createElement(
+                  "p",
+                  {
+                    className: "my-1",
+                  },
+                  text
+                ),
+                /*#__PURE__*/ _react.default.createElement(
+                  "p",
+                  {
+                    className: "post-date",
+                  },
+                  "Posted on ",
+                  /*#__PURE__*/ _react.default.createElement(
+                    _reactMoment.default,
+                    {
+                      format: "YYYY/MM/DD",
+                    },
+                    date
+                  )
+                ),
+                !auth.loading &&
+                  user === auth.user._id &&
+                  /*#__PURE__*/ _react.default.createElement(
+                    "button",
+                    {
+                      type: "button",
+                      className: "btn btn-danger",
+                      onClick: function onClick() {
+                        return dispatch((0, _post.deleteComment)(postId, _id));
+                      },
+                    },
+                    /*#__PURE__*/ _react.default.createElement("i", {
+                      className: "fas fa-times",
+                    })
+                  )
+              )
+            )
+          );
+        };
+
+        var _default = CommentItem;
+        exports.default = _default;
+      },
+      {
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        react: "../../../node_modules/react/index.js",
+        "react-redux": "../../../node_modules/react-redux/es/index.js",
+        "react-router-dom":
+          "../../../node_modules/react-router-dom/esm/react-router-dom.js",
+        "react-moment": "../../../node_modules/react-moment/dist/index.js",
+        "../../actions/post": "actions/post.js",
+      },
+    ],
+    "components/post/Post.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.default = void 0;
+
+        var _react = _interopRequireWildcard(require("react"));
+
+        var _reactRedux = require("react-redux");
+
+        var _reactRouterDom = require("react-router-dom");
+
+        var _post = require("../../actions/post");
+
+        var _Spinner = _interopRequireDefault(require("../../views/Spinner"));
+
+        var _PostItem = _interopRequireDefault(require("../posts/PostItem"));
+
+        var _CommentForm = _interopRequireDefault(require("./CommentForm"));
+
+        var _CommentItem = _interopRequireDefault(require("./CommentItem"));
+
+        var Post = function Post(_ref) {
+          var match = _ref.match;
+          var dispatch = (0, _reactRedux.useDispatch)();
+
+          var _useSelector = (0, _reactRedux.useSelector)(function (state) {
+              return state.post;
+            }),
+            post = _useSelector.post,
+            loading = _useSelector.loading;
+
+          (0, _react.useEffect)(
+            function () {
+              dispatch((0, _post.getPost)(match.params.id));
+            },
+            [_post.getPost]
+          );
+          return loading || post === null
+            ? /*#__PURE__*/ _react.default.createElement(_Spinner.default, null)
+            : /*#__PURE__*/ _react.default.createElement(
+                _react.default.Fragment,
+                null,
+                /*#__PURE__*/ _react.default.createElement(
+                  _reactRouterDom.Link,
+                  {
+                    to: "/posts",
+                    className: "btn",
+                  },
+                  "Back To Posts"
+                ),
+                /*#__PURE__*/ _react.default.createElement(_PostItem.default, {
+                  post: post,
+                  showActions: false,
+                }),
+                /*#__PURE__*/ _react.default.createElement(
+                  _CommentForm.default,
+                  {
+                    postId: post._id,
+                  }
+                ),
+                /*#__PURE__*/ _react.default.createElement(
+                  "div",
+                  {
+                    className: "comments",
+                  },
+                  post.comments.map(function (comment) {
+                    return /*#__PURE__*/ _react.default.createElement(
+                      _CommentItem.default,
+                      {
+                        key: comment._id,
+                        comment: comment,
+                        postId: post._id,
+                      }
+                    );
+                  })
+                )
+              );
+        };
+
+        var _default = Post;
+        exports.default = _default;
+      },
+      {
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        "@babel/runtime/helpers/interopRequireWildcard":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireWildcard.js",
+        react: "../../../node_modules/react/index.js",
+        "react-redux": "../../../node_modules/react-redux/es/index.js",
+        "react-router-dom":
+          "../../../node_modules/react-router-dom/esm/react-router-dom.js",
+        "../../actions/post": "actions/post.js",
+        "../../views/Spinner": "views/Spinner.js",
+        "../posts/PostItem": "components/posts/PostItem.js",
+        "./CommentForm": "components/post/CommentForm.js",
+        "./CommentItem": "components/post/CommentItem.js",
+      },
+    ],
     "views/Landing.js": [
       function (require, module, exports) {
         "use strict";
@@ -62456,6 +64703,28 @@ object-assign
               /*#__PURE__*/ _react.default.createElement(
                 _reactRouterDom.Link,
                 {
+                  to: "/profiles",
+                },
+                "Profiles"
+              )
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "li",
+              null,
+              /*#__PURE__*/ _react.default.createElement(
+                _reactRouterDom.Link,
+                {
+                  to: "/posts",
+                },
+                "Posts"
+              )
+            ),
+            /*#__PURE__*/ _react.default.createElement(
+              "li",
+              null,
+              /*#__PURE__*/ _react.default.createElement(
+                _reactRouterDom.Link,
+                {
                   to: "/dashboard",
                 },
                 /*#__PURE__*/ _react.default.createElement("i", {
@@ -62474,12 +64743,12 @@ object-assign
               "li",
               null,
               /*#__PURE__*/ _react.default.createElement(
-                "a",
+                _reactRouterDom.Link,
                 {
                   onClick: function onClick() {
                     return dispatch((0, _auth.logout)());
                   },
-                  href: "#!",
+                  to: "/login",
                 },
                 /*#__PURE__*/ _react.default.createElement("i", {
                   className: "fas fa-sign-out-alt",
@@ -62502,9 +64771,11 @@ object-assign
               "li",
               null,
               /*#__PURE__*/ _react.default.createElement(
-                "a",
-                null,
-                "Developers"
+                _reactRouterDom.Link,
+                {
+                  to: "/profiles",
+                },
+                "Profiles"
               )
             ),
             /*#__PURE__*/ _react.default.createElement(
@@ -62986,7 +65257,7 @@ object-assign
                 {},
                 {
                   error: payload,
-                  loading: false,
+                  loading: false, // profile: null,
                 }
               );
 
@@ -63014,6 +65285,202 @@ object-assign
         "../actions/types": "actions/types.js",
       },
     ],
+    "reducers/postReducer.js": [
+      function (require, module, exports) {
+        "use strict";
+
+        var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+        Object.defineProperty(exports, "__esModule", {
+          value: true,
+        });
+        exports.default = _default;
+
+        var _toConsumableArray2 = _interopRequireDefault(
+          require("@babel/runtime/helpers/toConsumableArray")
+        );
+
+        var _defineProperty2 = _interopRequireDefault(
+          require("@babel/runtime/helpers/defineProperty")
+        );
+
+        var _types = require("../actions/types");
+
+        function ownKeys(object, enumerableOnly) {
+          var keys = Object.keys(object);
+          if (Object.getOwnPropertySymbols) {
+            var symbols = Object.getOwnPropertySymbols(object);
+            if (enumerableOnly)
+              symbols = symbols.filter(function (sym) {
+                return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+              });
+            keys.push.apply(keys, symbols);
+          }
+          return keys;
+        }
+
+        function _objectSpread(target) {
+          for (var i = 1; i < arguments.length; i++) {
+            var source = arguments[i] != null ? arguments[i] : {};
+            if (i % 2) {
+              ownKeys(Object(source), true).forEach(function (key) {
+                (0, _defineProperty2.default)(target, key, source[key]);
+              });
+            } else if (Object.getOwnPropertyDescriptors) {
+              Object.defineProperties(
+                target,
+                Object.getOwnPropertyDescriptors(source)
+              );
+            } else {
+              ownKeys(Object(source)).forEach(function (key) {
+                Object.defineProperty(
+                  target,
+                  key,
+                  Object.getOwnPropertyDescriptor(source, key)
+                );
+              });
+            }
+          }
+          return target;
+        }
+
+        var initialState = {
+          posts: [],
+          post: null,
+          loading: true,
+          error: {},
+        };
+
+        function _default() {
+          var state =
+            arguments.length > 0 && arguments[0] !== undefined
+              ? arguments[0]
+              : initialState;
+          var action = arguments.length > 1 ? arguments[1] : undefined;
+          var type = action.type,
+            payload = action.payload;
+
+          switch (type) {
+            case _types.GET_POSTS:
+              return _objectSpread(
+                _objectSpread({}, state),
+                {},
+                {
+                  posts: payload,
+                  loading: false,
+                }
+              );
+
+            case _types.GET_POST:
+              return _objectSpread(
+                _objectSpread({}, state),
+                {},
+                {
+                  post: payload,
+                  loading: false,
+                }
+              );
+
+            case _types.ADD_POST:
+              return {
+                state: state,
+                posts: [payload].concat(
+                  (0, _toConsumableArray2.default)(state.posts)
+                ),
+                loading: false,
+              };
+
+            case _types.POST_ERROR:
+              return _objectSpread(
+                _objectSpread({}, state),
+                {},
+                {
+                  error: payload,
+                  loading: false,
+                }
+              );
+
+            case _types.UPDATE_LIKES:
+              return _objectSpread(
+                _objectSpread({}, state),
+                {},
+                {
+                  posts: state.posts.map(function (p) {
+                    return p._id === payload.id
+                      ? _objectSpread(
+                          _objectSpread({}, p),
+                          {},
+                          {
+                            likes: payload.likes,
+                          }
+                        )
+                      : p;
+                  }),
+                  loading: false,
+                }
+              );
+
+            case _types.DELETE_POST:
+              return _objectSpread(
+                _objectSpread({}, state),
+                {},
+                {
+                  posts: state.posts.filter(function (p) {
+                    return p._id !== payload;
+                  }),
+                  loading: false,
+                }
+              );
+
+            case _types.ADD_COMMENT:
+              return _objectSpread(
+                _objectSpread({}, state),
+                {},
+                {
+                  post: _objectSpread(
+                    _objectSpread({}, state.post),
+                    {},
+                    {
+                      comments: payload,
+                    }
+                  ),
+                  loading: false,
+                }
+              );
+
+            case _types.REMOVE_COMMENT:
+              return _objectSpread(
+                _objectSpread({}, state),
+                {},
+                {
+                  post: _objectSpread(
+                    _objectSpread({}, state.posts),
+                    {},
+                    {
+                      comments: state.post.comments.filter(function (c) {
+                        return c._id !== payload;
+                      }),
+                      loading: false,
+                    }
+                  ),
+                }
+              );
+
+            default:
+              return state;
+          }
+        }
+      },
+      {
+        "@babel/runtime/helpers/interopRequireDefault":
+          "../../../node_modules/@babel/runtime/helpers/interopRequireDefault.js",
+        "@babel/runtime/helpers/toConsumableArray":
+          "../../../node_modules/@babel/runtime/helpers/toConsumableArray.js",
+        "@babel/runtime/helpers/defineProperty":
+          "../../../node_modules/@babel/runtime/helpers/defineProperty.js",
+        "../actions/types": "actions/types.js",
+      },
+    ],
     "reducers/index.js": [
       function (require, module, exports) {
         "use strict";
@@ -63035,10 +65502,13 @@ object-assign
           require("./profileReducer")
         );
 
+        var _postReducer = _interopRequireDefault(require("./postReducer"));
+
         var _default = (0, _redux.combineReducers)({
           alert: _alertReducer.default,
           auth: _authReducer.default,
           profile: _profileReducer.default,
+          post: _postReducer.default,
         });
 
         exports.default = _default;
@@ -63050,6 +65520,7 @@ object-assign
         "./alertReducer": "reducers/alertReducer.js",
         "./authReducer": "reducers/authReducer.js",
         "./profileReducer": "reducers/profileReducer.js",
+        "./postReducer": "reducers/postReducer.js",
       },
     ],
     "store.js": [
@@ -63205,6 +65676,20 @@ object-assign
           require("../components/profile-form/AddEducation")
         );
 
+        var _Profiles = _interopRequireDefault(
+          require("../components/profiles/Profiles")
+        );
+
+        var _Profile = _interopRequireDefault(
+          require("../components/profile/Profile")
+        );
+
+        var _Posts = _interopRequireDefault(
+          require("../components/posts/Posts")
+        );
+
+        var _Post = _interopRequireDefault(require("../components/post/Post"));
+
         var _Landing = _interopRequireDefault(require("./Landing"));
 
         var _NavBar = _interopRequireDefault(require("./NavBar"));
@@ -63273,6 +65758,22 @@ object-assign
                       }
                     ),
                     /*#__PURE__*/ _react.default.createElement(
+                      _reactRouterDom.Route,
+                      {
+                        exact: true,
+                        path: "/profiles",
+                        component: _Profiles.default,
+                      }
+                    ),
+                    /*#__PURE__*/ _react.default.createElement(
+                      _reactRouterDom.Route,
+                      {
+                        exact: true,
+                        path: "/profile/:id",
+                        component: _Profile.default,
+                      }
+                    ),
+                    /*#__PURE__*/ _react.default.createElement(
                       _PrivateRoute.default,
                       {
                         exact: true,
@@ -63311,6 +65812,22 @@ object-assign
                         path: "/add-education",
                         component: _AddEducation.default,
                       }
+                    ),
+                    /*#__PURE__*/ _react.default.createElement(
+                      _PrivateRoute.default,
+                      {
+                        exact: true,
+                        path: "/posts",
+                        component: _Posts.default,
+                      }
+                    ),
+                    /*#__PURE__*/ _react.default.createElement(
+                      _PrivateRoute.default,
+                      {
+                        exact: true,
+                        path: "/posts/:id",
+                        component: _Post.default,
+                      }
                     )
                   )
                 )
@@ -63348,6 +65865,10 @@ object-assign
           "components/profile-form/AddExperience.js",
         "../components/profile-form/AddEducation":
           "components/profile-form/AddEducation.js",
+        "../components/profiles/Profiles": "components/profiles/Profiles.js",
+        "../components/profile/Profile": "components/profile/Profile.js",
+        "../components/posts/Posts": "components/posts/Posts.js",
+        "../components/post/Post": "components/post/Post.js",
         "./Landing": "views/Landing.js",
         "./NavBar": "views/NavBar.js",
         "../store": "store.js",
@@ -63425,7 +65946,7 @@ object-assign
           var hostname = "" || location.hostname;
           var protocol = location.protocol === "https:" ? "wss" : "ws";
           var ws = new WebSocket(
-            protocol + "://" + hostname + ":" + "33423" + "/"
+            protocol + "://" + hostname + ":" + "42557" + "/"
           );
 
           ws.onmessage = function (event) {

@@ -1,0 +1,42 @@
+{
+  "id": "components/profile/ProfileEducation.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileEducation.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "moment",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileEducation.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/moment/moment.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileEducation.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "react-moment",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileEducation.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-moment/dist/index.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _moment = require(\"moment\");\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _reactMoment = _interopRequireDefault(require(\"react-moment\"));\n\nvar ProfileEducation = function ProfileEducation(_ref) {\n  var _ref$education = _ref.education,\n      school = _ref$education.school,\n      degree = _ref$education.degree,\n      fieldofstudy = _ref$education.fieldofstudy,\n      to = _ref$education.to,\n      from = _ref$education.from,\n      description = _ref$education.description;\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"h3\", {\n    className: \"text-dark\"\n  }, school), /*#__PURE__*/_react.default.createElement(\"p\", null, /*#__PURE__*/_react.default.createElement(_reactMoment.default, {\n    format: \"YYYY/MM/DD\"\n  }, from), \" -\", \" \", !to ? \"Now\" : /*#__PURE__*/_react.default.createElement(_reactMoment.default, {\n    format: \"YYYY/MM/DD\"\n  }, to)), /*#__PURE__*/_react.default.createElement(\"p\", null, /*#__PURE__*/_react.default.createElement(\"strong\", null, \"Degree: \"), \" \", degree), /*#__PURE__*/_react.default.createElement(\"p\", null, /*#__PURE__*/_react.default.createElement(\"strong\", null, \"Field Of Study: \"), \" \", fieldofstudy), /*#__PURE__*/_react.default.createElement(\"p\", null, /*#__PURE__*/_react.default.createElement(\"strong\", null, \"Description:\"), \" \", description));\n};\n\nvar _default = ProfileEducation;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "12d5f8aafee95cdfe09f793360a845a3",
+  "cacheData": { "env": {} }
+}

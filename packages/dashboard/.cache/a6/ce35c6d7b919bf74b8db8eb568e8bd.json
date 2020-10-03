@@ -35,13 +35,18 @@
       "name": "./profileReducer",
       "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/reducers/index.js",
       "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/reducers/profileReducer.js"
+    },
+    {
+      "name": "./postReducer",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/reducers/index.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/reducers/postReducer.js"
     }
   ],
   "generated": {
-    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _redux = require(\"redux\");\n\nvar _alertReducer = _interopRequireDefault(require(\"./alertReducer\"));\n\nvar _authReducer = _interopRequireDefault(require(\"./authReducer\"));\n\nvar _profileReducer = _interopRequireDefault(require(\"./profileReducer\"));\n\nvar _default = (0, _redux.combineReducers)({\n  alert: _alertReducer.default,\n  auth: _authReducer.default,\n  profile: _profileReducer.default\n});\n\nexports.default = _default;"
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _redux = require(\"redux\");\n\nvar _alertReducer = _interopRequireDefault(require(\"./alertReducer\"));\n\nvar _authReducer = _interopRequireDefault(require(\"./authReducer\"));\n\nvar _profileReducer = _interopRequireDefault(require(\"./profileReducer\"));\n\nvar _postReducer = _interopRequireDefault(require(\"./postReducer\"));\n\nvar _default = (0, _redux.combineReducers)({\n  alert: _alertReducer.default,\n  auth: _authReducer.default,\n  profile: _profileReducer.default,\n  post: _postReducer.default\n});\n\nexports.default = _default;"
   },
   "sourceMaps": null,
   "error": null,
-  "hash": "8aae8c7868eff0a3853b196e7f49937c",
+  "hash": "6107d43ffcb9a521905d1e1af6a181d0",
   "cacheData": { "env": {} }
 }

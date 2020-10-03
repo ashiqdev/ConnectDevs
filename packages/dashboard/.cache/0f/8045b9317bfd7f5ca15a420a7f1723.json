@@ -1,0 +1,52 @@
+{
+  "id": "components/post/CommentItem.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/CommentItem.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/CommentItem.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "react-redux",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/CommentItem.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/index.js"
+    },
+    {
+      "name": "react-router-dom",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/CommentItem.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-router-dom/esm/react-router-dom.js"
+    },
+    {
+      "name": "react-moment",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/CommentItem.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-moment/dist/index.js"
+    },
+    {
+      "name": "../../actions/post",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/CommentItem.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/post.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _reactRedux = require(\"react-redux\");\n\nvar _reactRouterDom = require(\"react-router-dom\");\n\nvar _reactMoment = _interopRequireDefault(require(\"react-moment\"));\n\nvar _post = require(\"../../actions/post\");\n\n/* eslint-disable react/prop-types */\nvar CommentItem = function CommentItem(_ref) {\n  var postId = _ref.postId,\n      _ref$comment = _ref.comment,\n      _id = _ref$comment._id,\n      text = _ref$comment.text,\n      name = _ref$comment.name,\n      avatar = _ref$comment.avatar,\n      user = _ref$comment.user,\n      date = _ref$comment.date;\n  var auth = (0, _reactRedux.useSelector)(function (state) {\n    return state.auth;\n  });\n  var dispatch = (0, _reactRedux.useDispatch)();\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"post bg-white p-1 my-1\"\n  }, /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {\n    to: \"/profile/\".concat(user)\n  }, /*#__PURE__*/_react.default.createElement(\"img\", {\n    className: \"round-img\",\n    src: avatar,\n    alt: \"Avatar\"\n  }), /*#__PURE__*/_react.default.createElement(\"h4\", null, name))), /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"p\", {\n    className: \"my-1\"\n  }, text), /*#__PURE__*/_react.default.createElement(\"p\", {\n    className: \"post-date\"\n  }, \"Posted on \", /*#__PURE__*/_react.default.createElement(_reactMoment.default, {\n    format: \"YYYY/MM/DD\"\n  }, date)), !auth.loading && user === auth.user._id && /*#__PURE__*/_react.default.createElement(\"button\", {\n    type: \"button\",\n    className: \"btn btn-danger\",\n    onClick: function onClick() {\n      return dispatch((0, _post.deleteComment)(postId, _id));\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fas fa-times\"\n  })))));\n};\n\nvar _default = CommentItem;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "fb4e3c1a0a9c5b3c5b73ba6520acaec8",
+  "cacheData": { "env": {} }
+}

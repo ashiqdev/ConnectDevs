@@ -1,0 +1,57 @@
+{
+  "id": "components/profiles/Profiles.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profiles/Profiles.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireWildcard",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profiles/Profiles.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireWildcard.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profiles/Profiles.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "react-redux",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profiles/Profiles.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/index.js"
+    },
+    {
+      "name": "../../views/Spinner",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profiles/Profiles.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Spinner.js"
+    },
+    {
+      "name": "../../actions/profile",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profiles/Profiles.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/profile.js"
+    },
+    {
+      "name": "./ProfileItem",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profiles/Profiles.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profiles/ProfileItem.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nvar _interopRequireWildcard = require(\"@babel/runtime/helpers/interopRequireWildcard\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireWildcard(require(\"react\"));\n\nvar _reactRedux = require(\"react-redux\");\n\nvar _Spinner = _interopRequireDefault(require(\"../../views/Spinner\"));\n\nvar _profile = require(\"../../actions/profile\");\n\nvar _ProfileItem = _interopRequireDefault(require(\"./ProfileItem\"));\n\nvar Profiles = function Profiles() {\n  var dispatch = (0, _reactRedux.useDispatch)();\n\n  var _useSelector = (0, _reactRedux.useSelector)(function (state) {\n    return state.profile;\n  }),\n      profiles = _useSelector.profiles,\n      loading = _useSelector.loading;\n\n  (0, _react.useEffect)(function () {\n    dispatch((0, _profile.getAllUsersProfile)());\n  }, []);\n  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, loading ? /*#__PURE__*/_react.default.createElement(_Spinner.default, null) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(\"h1\", {\n    className: \"large text-primary\"\n  }, \"Developers\"), /*#__PURE__*/_react.default.createElement(\"p\", {\n    className: \"lead\"\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fab fa-connectdevelop\"\n  }, \"Browse and Connect with developers\")), /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"profiles\"\n  }, profiles.length > 0 ? profiles.map(function (profile) {\n    return /*#__PURE__*/_react.default.createElement(_ProfileItem.default, {\n      key: profile._id,\n      profile: profile\n    });\n  }) : /*#__PURE__*/_react.default.createElement(\"h4\", null, \"No Profiles found...\"))));\n};\n\nvar _default = Profiles;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "c3a5b007219d6853f206c2905679f135",
+  "cacheData": { "env": {} }
+}

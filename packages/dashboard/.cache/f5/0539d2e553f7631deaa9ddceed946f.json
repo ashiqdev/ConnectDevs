@@ -1,0 +1,82 @@
+{
+  "id": "components/profile/Profile.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/Profile.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireWildcard",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/Profile.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireWildcard.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/Profile.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "react-router-dom",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/Profile.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-router-dom/esm/react-router-dom.js"
+    },
+    {
+      "name": "react-redux",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/Profile.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/index.js"
+    },
+    {
+      "name": "../../actions/profile",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/Profile.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/profile.js"
+    },
+    {
+      "name": "../../views/Spinner",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/Profile.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Spinner.js"
+    },
+    {
+      "name": "./ProfileTop",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/Profile.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileTop.js"
+    },
+    {
+      "name": "./ProfileAbout",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/Profile.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileAbout.js"
+    },
+    {
+      "name": "./ProfileExperience",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/Profile.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileExperience.js"
+    },
+    {
+      "name": "./ProfileEducation",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/Profile.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileEducation.js"
+    },
+    {
+      "name": "./ProfileGithub",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/Profile.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileGithub.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nvar _interopRequireWildcard = require(\"@babel/runtime/helpers/interopRequireWildcard\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireWildcard(require(\"react\"));\n\nvar _reactRouterDom = require(\"react-router-dom\");\n\nvar _reactRedux = require(\"react-redux\");\n\nvar _profile = require(\"../../actions/profile\");\n\nvar _Spinner = _interopRequireDefault(require(\"../../views/Spinner\"));\n\nvar _ProfileTop = _interopRequireDefault(require(\"./ProfileTop\"));\n\nvar _ProfileAbout = _interopRequireDefault(require(\"./ProfileAbout\"));\n\nvar _ProfileExperience = _interopRequireDefault(require(\"./ProfileExperience\"));\n\nvar _ProfileEducation = _interopRequireDefault(require(\"./ProfileEducation\"));\n\nvar _ProfileGithub = _interopRequireDefault(require(\"./ProfileGithub\"));\n\nvar Profile = function Profile(_ref) {\n  var match = _ref.match;\n  var dispatch = (0, _reactRedux.useDispatch)();\n  var auth = (0, _reactRedux.useSelector)(function (state) {\n    return state.auth;\n  });\n\n  var _useSelector = (0, _reactRedux.useSelector)(function (state) {\n    return state.profile;\n  }),\n      profile = _useSelector.profile,\n      loading = _useSelector.loading;\n\n  (0, _react.useEffect)(function () {\n    dispatch((0, _profile.getProfileById)(match.params.id));\n  }, [_profile.getProfileById, match.params.id]);\n\n  if (!auth.isAuthenticated) {\n    return /*#__PURE__*/_react.default.createElement(_reactRouterDom.Redirect, {\n      to: \"/login\"\n    });\n  }\n\n  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, profile === null || loading ? /*#__PURE__*/_react.default.createElement(_Spinner.default, null) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {\n    to: \"/profiles\",\n    className: \"btn btn-light\"\n  }, \"Back To Profiles\"), auth.isAuthenticated && auth.loading === false && auth.user._id === profile.user._id && /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {\n    to: \"/edit-profile\",\n    className: \"btn btn-dark\"\n  }, \"Edit Profile\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"profile-grid my-1\"\n  }, /*#__PURE__*/_react.default.createElement(_ProfileTop.default, {\n    profile: profile\n  }), /*#__PURE__*/_react.default.createElement(_ProfileAbout.default, {\n    profile: profile\n  }), /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"profile-exp bg-white p-2\"\n  }, /*#__PURE__*/_react.default.createElement(\"h2\", {\n    className: \"text-primary\"\n  }, \"Experience\"), profile.experience.length > 0 ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, profile.experience.map(function (exp) {\n    return /*#__PURE__*/_react.default.createElement(_ProfileExperience.default, {\n      key: exp._id,\n      experience: exp\n    });\n  })) : /*#__PURE__*/_react.default.createElement(\"h4\", null, \"No experience credentials\")), /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"profile-edu bg-white p-2\"\n  }, /*#__PURE__*/_react.default.createElement(\"h2\", {\n    className: \"text-primary\"\n  }, \"Education\"), profile.education.length > 0 ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, profile.education.map(function (edu) {\n    return /*#__PURE__*/_react.default.createElement(_ProfileEducation.default, {\n      key: edu._id,\n      education: edu\n    });\n  })) : /*#__PURE__*/_react.default.createElement(\"h4\", null, \"No education credentials\")), profile.githubusername && /*#__PURE__*/_react.default.createElement(_ProfileGithub.default, {\n    username: profile.githubusername\n  }))));\n};\n\nvar _default = Profile;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "8ad5a2f3114632e1484b2f6bfacbfed8",
+  "cacheData": { "env": {} }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "components/post/Post.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/Post.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireWildcard",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/Post.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireWildcard.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/Post.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "react-redux",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/Post.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/index.js"
+    },
+    {
+      "name": "react-router-dom",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/Post.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-router-dom/esm/react-router-dom.js"
+    },
+    {
+      "name": "../../actions/post",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/Post.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/post.js"
+    },
+    {
+      "name": "../../views/Spinner",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/Post.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/views/Spinner.js"
+    },
+    {
+      "name": "../posts/PostItem",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/Post.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/posts/PostItem.js"
+    },
+    {
+      "name": "./CommentForm",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/Post.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/CommentForm.js"
+    },
+    {
+      "name": "./CommentItem",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/Post.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/post/CommentItem.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nvar _interopRequireWildcard = require(\"@babel/runtime/helpers/interopRequireWildcard\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireWildcard(require(\"react\"));\n\nvar _reactRedux = require(\"react-redux\");\n\nvar _reactRouterDom = require(\"react-router-dom\");\n\nvar _post = require(\"../../actions/post\");\n\nvar _Spinner = _interopRequireDefault(require(\"../../views/Spinner\"));\n\nvar _PostItem = _interopRequireDefault(require(\"../posts/PostItem\"));\n\nvar _CommentForm = _interopRequireDefault(require(\"./CommentForm\"));\n\nvar _CommentItem = _interopRequireDefault(require(\"./CommentItem\"));\n\nvar Post = function Post(_ref) {\n  var match = _ref.match;\n  var dispatch = (0, _reactRedux.useDispatch)();\n\n  var _useSelector = (0, _reactRedux.useSelector)(function (state) {\n    return state.post;\n  }),\n      post = _useSelector.post,\n      loading = _useSelector.loading;\n\n  (0, _react.useEffect)(function () {\n    dispatch((0, _post.getPost)(match.params.id));\n  }, [_post.getPost]);\n  return loading || post === null ? /*#__PURE__*/_react.default.createElement(_Spinner.default, null) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {\n    to: \"/posts\",\n    className: \"btn\"\n  }, \"Back To Posts\"), /*#__PURE__*/_react.default.createElement(_PostItem.default, {\n    post: post,\n    showActions: false\n  }), /*#__PURE__*/_react.default.createElement(_CommentForm.default, {\n    postId: post._id\n  }), /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"comments\"\n  }, post.comments.map(function (comment) {\n    return /*#__PURE__*/_react.default.createElement(_CommentItem.default, {\n      key: comment._id,\n      comment: comment,\n      postId: post._id\n    });\n  })));\n};\n\nvar _default = Post;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "c1e91582b89ea8df8062a2ee03c6dd11",
+  "cacheData": { "env": {} }
+}

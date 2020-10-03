@@ -1,0 +1,32 @@
+{
+  "id": "components/profile/ProfileTop.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileTop.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileTop.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar ProfileTop = function ProfileTop(_ref) {\n  var _ref$profile = _ref.profile,\n      status = _ref$profile.status,\n      company = _ref$profile.company,\n      location = _ref$profile.location,\n      website = _ref$profile.website,\n      social = _ref$profile.social,\n      _ref$profile$user = _ref$profile.user,\n      name = _ref$profile$user.name,\n      avatar = _ref$profile$user.avatar;\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"profile-top bg-primary p-2\"\n  }, /*#__PURE__*/_react.default.createElement(\"img\", {\n    className: \"round-img my-1\",\n    src: avatar,\n    alt: \"\"\n  }), /*#__PURE__*/_react.default.createElement(\"h1\", {\n    className: \"large\"\n  }, name), /*#__PURE__*/_react.default.createElement(\"p\", {\n    className: \"lead\"\n  }, status, \" \", company && /*#__PURE__*/_react.default.createElement(\"span\", null, \"at \", company)), /*#__PURE__*/_react.default.createElement(\"p\", null, location && /*#__PURE__*/_react.default.createElement(\"span\", null, location)), /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"icons my-1\"\n  }, website && /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: website,\n    target: \"_blank\",\n    rel: \"noopener noreferrer\"\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fas fa-globe fa-2x\"\n  })), (social === null || social === void 0 ? void 0 : social.twitter) && /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: social.twitter,\n    target: \"_blank\",\n    rel: \"noopener noreferrer\"\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fab fa-twitter fa-2x\"\n  })), (social === null || social === void 0 ? void 0 : social.facebook) && /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: social.facebook,\n    target: \"_blank\",\n    rel: \"noopener noreferrer\"\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fab fa-facebook fa-2x\"\n  })), (social === null || social === void 0 ? void 0 : social.linkedin) && /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: social.linkedin,\n    target: \"_blank\",\n    rel: \"noopener noreferrer\"\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fab fa-linkedin fa-2x\"\n  })), (social === null || social === void 0 ? void 0 : social.youtube) && /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: social.youtube,\n    target: \"_blank\",\n    rel: \"noopener noreferrer\"\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fab fa-youtube fa-2x\"\n  })), (social === null || social === void 0 ? void 0 : social.instagram) && /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: social.instagram,\n    target: \"_blank\",\n    rel: \"noopener noreferrer\"\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fab fa-instagram fa-2x\"\n  }))));\n};\n\nvar _default = ProfileTop;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "61b25ef78dffd4158d1e05bd1a114f14",
+  "cacheData": { "env": {} }
+}

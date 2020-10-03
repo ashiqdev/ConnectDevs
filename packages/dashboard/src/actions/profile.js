@@ -25,7 +25,7 @@ export const getCurrentProfile = () => async (dispatch) => {
   }
 };
 
-// Get all users ptofile
+// Get all users profile
 export const getAllUsersProfile = () => async (dispatch) => {
   dispatch({ type: CLEAR_PROFILE });
   try {
@@ -251,7 +251,7 @@ export const deleteEducation = (id) => async (dispatch) => {
 export const deleteAccount = () => async (dispatch) => {
   if (window.confirm("Are you sure? This can not be undone!")) {
     try {
-      const res = await axios.delete(`${process.env.API_URL}/api/profile`);
+      await axios.delete(`${process.env.API_URL}/api/profile`);
 
       dispatch({
         type: CLEAR_PROFILE,

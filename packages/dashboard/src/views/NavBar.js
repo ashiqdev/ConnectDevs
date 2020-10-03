@@ -11,16 +11,23 @@ const NavBar = () => {
   const authLinks = (
     <ul>
       <li>
+        <Link to="/profiles">Profiles</Link>
+      </li>
+
+      <li>
+        <Link to="/posts">Posts</Link>
+      </li>
+      <li>
         <Link to="/dashboard">
           <i className="fas fa-user" />
           <span className="hide-sm">Dashboard</span>
         </Link>
       </li>
       <li>
-        <a onClick={() => dispatch(logout())} href="#!">
+        <Link onClick={() => dispatch(logout())} to="/login">
           <i className="fas fa-sign-out-alt" />
           <span className="hide-sm">Logout</span>
-        </a>
+        </Link>
       </li>
     </ul>
   );
@@ -28,7 +35,7 @@ const NavBar = () => {
   const guestLinks = (
     <ul>
       <li>
-        <a>Developers</a>
+        <Link to="/profiles">Profiles</Link>
       </li>
       <li>
         <Link to="/register">Register</Link>

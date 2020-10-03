@@ -1,0 +1,37 @@
+{
+  "id": "components/profiles/ProfileItem.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profiles/ProfileItem.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profiles/ProfileItem.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "react-router-dom",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profiles/ProfileItem.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-router-dom/esm/react-router-dom.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _reactRouterDom = require(\"react-router-dom\");\n\n/* eslint-disable react/prop-types */\nvar ProfileItem = function ProfileItem(props) {\n  var _props$profile = props.profile,\n      _props$profile$user = _props$profile.user,\n      _id = _props$profile$user._id,\n      name = _props$profile$user.name,\n      avatar = _props$profile$user.avatar,\n      status = _props$profile.status,\n      company = _props$profile.company,\n      location = _props$profile.location,\n      skills = _props$profile.skills;\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"profile bg-light\"\n  }, /*#__PURE__*/_react.default.createElement(\"img\", {\n    src: avatar,\n    alt: \"\",\n    className: \"round-img\"\n  }), /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"h2\", null, name), /*#__PURE__*/_react.default.createElement(\"p\", null, status, \" \", company && /*#__PURE__*/_react.default.createElement(\"span\", null, \" at \", company)), /*#__PURE__*/_react.default.createElement(\"p\", {\n    className: \"my-1\"\n  }, location && /*#__PURE__*/_react.default.createElement(\"span\", null, location)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {\n    className: \"btn btn-primary\",\n    to: \"/profile/\".concat(_id)\n  }, \"View Profile\")), /*#__PURE__*/_react.default.createElement(\"ul\", null, skills.slice(0, 4).map(function (skill, i) {\n    return /*#__PURE__*/_react.default.createElement(\"li\", {\n      key: i,\n      className: \"text-primary\"\n    }, /*#__PURE__*/_react.default.createElement(\"i\", {\n      className: \"fas fa-check\"\n    }), \" \", skill);\n  })));\n};\n\nvar _default = ProfileItem;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "aaf2ec5118f480bc21b6f1c492ab4e81",
+  "cacheData": { "env": {} }
+}

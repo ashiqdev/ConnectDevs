@@ -1,0 +1,52 @@
+{
+  "id": "components/posts/PostForm.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireWildcard",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/posts/PostForm.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireWildcard.js"
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/posts/PostForm.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "@babel/runtime/helpers/slicedToArray",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/posts/PostForm.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/slicedToArray.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/posts/PostForm.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "react-redux",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/posts/PostForm.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/index.js"
+    },
+    {
+      "name": "../../actions/post",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/posts/PostForm.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/post.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireWildcard = require(\"@babel/runtime/helpers/interopRequireWildcard\");\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _slicedToArray2 = _interopRequireDefault(require(\"@babel/runtime/helpers/slicedToArray\"));\n\nvar _react = _interopRequireWildcard(require(\"react\"));\n\nvar _reactRedux = require(\"react-redux\");\n\nvar _post = require(\"../../actions/post\");\n\nvar PostForm = function PostForm() {\n  var dispatch = (0, _reactRedux.useDispatch)();\n\n  var _useState = (0, _react.useState)(\"\"),\n      _useState2 = (0, _slicedToArray2.default)(_useState, 2),\n      text = _useState2[0],\n      setText = _useState2[1];\n\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"post-form\"\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"bg-primary p\"\n  }, /*#__PURE__*/_react.default.createElement(\"h3\", null, \"Say Something...\")), /*#__PURE__*/_react.default.createElement(\"form\", {\n    className: \"form my-1\",\n    onSubmit: function onSubmit(e) {\n      e.preventDefault();\n      dispatch((0, _post.addPost)({\n        text: text\n      }));\n      setText(\"\");\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"textarea\", {\n    name: \"text\",\n    cols: \"30\",\n    rows: \"5\",\n    placeholder: \"Comment on this post\",\n    value: text,\n    onChange: function onChange(e) {\n      return setText(e.target.value);\n    },\n    required: true\n  }), /*#__PURE__*/_react.default.createElement(\"input\", {\n    type: \"submit\",\n    className: \"btn btn-dark my-1\",\n    value: \"Submit\"\n  })));\n};\n\nvar _default = PostForm;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "0de49c11d09fb81ebd0f0a2df2cf4cf5",
+  "cacheData": { "env": {} }
+}

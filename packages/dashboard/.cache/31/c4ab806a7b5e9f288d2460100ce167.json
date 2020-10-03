@@ -1,0 +1,32 @@
+{
+  "id": "components/profile/ProfileAbout.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileAbout.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/profile/ProfileAbout.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar ProfileAbout = function ProfileAbout(_ref) {\n  var _ref$profile = _ref.profile,\n      bio = _ref$profile.bio,\n      skills = _ref$profile.skills,\n      name = _ref$profile.user.name;\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"profile-about bg-light p-2\"\n  }, bio && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(\"h2\", {\n    className: \"text-primary\"\n  }, name.trim().split(\" \")[0], \"s Bio\"), /*#__PURE__*/_react.default.createElement(\"p\", null, bio), /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"line\"\n  })), /*#__PURE__*/_react.default.createElement(\"h2\", {\n    className: \"text-primary\"\n  }, \"Skill Set\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"skills\"\n  }, skills.map(function (skill, i) {\n    return /*#__PURE__*/_react.default.createElement(\"div\", {\n      key: i,\n      className: \"p-1\"\n    }, /*#__PURE__*/_react.default.createElement(\"i\", {\n      className: \"fas fa-check\"\n    }), \" \", skill);\n  })));\n};\n\nvar _default = ProfileAbout;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "100c542149f5fe90a611643bf2d9d2fa",
+  "cacheData": { "env": {} }
+}

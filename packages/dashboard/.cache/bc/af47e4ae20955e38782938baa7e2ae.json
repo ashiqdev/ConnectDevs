@@ -1,0 +1,52 @@
+{
+  "id": "components/posts/PostItem.js",
+  "dependencies": [
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/.babelrc",
+      "includedInParent": true,
+      "mtime": 1600687536415
+    },
+    {
+      "name": "/home/ashik/tuts-project/devConnector/packages/dashboard/package.json",
+      "includedInParent": true,
+      "mtime": 1600687904360
+    },
+    {
+      "name": "@babel/runtime/helpers/interopRequireDefault",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/posts/PostItem.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/@babel/runtime/helpers/interopRequireDefault.js"
+    },
+    {
+      "name": "react",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/posts/PostItem.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react/index.js"
+    },
+    {
+      "name": "react-router-dom",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/posts/PostItem.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-router-dom/esm/react-router-dom.js"
+    },
+    {
+      "name": "react-moment",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/posts/PostItem.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-moment/dist/index.js"
+    },
+    {
+      "name": "react-redux",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/posts/PostItem.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/node_modules/react-redux/es/index.js"
+    },
+    {
+      "name": "../../actions/post",
+      "parent": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/components/posts/PostItem.js",
+      "resolved": "/home/ashik/tuts-project/devConnector/packages/dashboard/src/actions/post.js"
+    }
+  ],
+  "generated": {
+    "js": "\"use strict\";\n\nvar _interopRequireDefault = require(\"@babel/runtime/helpers/interopRequireDefault\");\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = void 0;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _reactRouterDom = require(\"react-router-dom\");\n\nvar _reactMoment = _interopRequireDefault(require(\"react-moment\"));\n\nvar _reactRedux = require(\"react-redux\");\n\nvar _post = require(\"../../actions/post\");\n\nvar PostItem = function PostItem(_ref) {\n  var _ref$post = _ref.post,\n      _id = _ref$post._id,\n      text = _ref$post.text,\n      name = _ref$post.name,\n      avatar = _ref$post.avatar,\n      user = _ref$post.user,\n      likes = _ref$post.likes,\n      comments = _ref$post.comments,\n      date = _ref$post.date,\n      showActions = _ref.showActions;\n  var auth = (0, _reactRedux.useSelector)(function (state) {\n    return state.auth;\n  });\n  var dispatch = (0, _reactRedux.useDispatch)();\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"post bg-white p-1 my-1\"\n  }, /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {\n    to: \"/profile/\".concat(user)\n  }, /*#__PURE__*/_react.default.createElement(\"img\", {\n    className: \"round-img\",\n    src: avatar,\n    alt: \"Avatar\"\n  }), /*#__PURE__*/_react.default.createElement(\"h4\", null, name))), /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"p\", {\n    className: \"my-1\"\n  }, text), /*#__PURE__*/_react.default.createElement(\"p\", {\n    className: \"post-date\"\n  }, \"Posted on \", /*#__PURE__*/_react.default.createElement(_reactMoment.default, {\n    format: \"YYYY/MM/DD\"\n  }, date)), showActions && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(\"button\", {\n    type: \"button\",\n    onClick: function onClick(e) {\n      return dispatch((0, _post.addLike)(_id));\n    },\n    className: \"btn btn-light\"\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fas fa-thumbs-up\"\n  }), \" \", likes.length > 0 && /*#__PURE__*/_react.default.createElement(\"span\", null, likes.length)), /*#__PURE__*/_react.default.createElement(\"button\", {\n    type: \"button\",\n    onClick: function onClick() {\n      return dispatch((0, _post.removeLike)(_id));\n    },\n    className: \"btn btn-light\"\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fas fa-thumbs-down\"\n  })), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {\n    to: \"/posts/\".concat(_id),\n    className: \"btn btn-primary\"\n  }, \"Discussion\", \" \", comments.length > 0 && /*#__PURE__*/_react.default.createElement(\"span\", {\n    className: \"comment-count\"\n  }, comments.length)), !auth.loading && user === auth.user._id && /*#__PURE__*/_react.default.createElement(\"button\", {\n    type: \"button\",\n    onClick: function onClick() {\n      return dispatch((0, _post.deletePost)(_id));\n    },\n    className: \"btn btn-danger\"\n  }, /*#__PURE__*/_react.default.createElement(\"i\", {\n    className: \"fas fa-times\"\n  })))));\n};\n\nPostItem.defaultProps = {\n  showActions: true\n};\nvar _default = PostItem;\nexports.default = _default;"
+  },
+  "sourceMaps": null,
+  "error": null,
+  "hash": "3dfd09621588eb5b5861856a0e89f152",
+  "cacheData": { "env": {} }
+}
